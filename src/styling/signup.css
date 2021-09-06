@@ -1,0 +1,34 @@
+.Form {
+  width: 30%;
+  height: 50%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 20px;
+}
+.SignUpPage {
+  text-align: center;
+  background-color: darkgray;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form #submit {
+  background-color: salmon;
+}
+
+.Form .inputs .ErrorMessage {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  cursor: pointer;
+
+  color: #b70c13;
+}
+
+.Form .inputs .ErrorState {
+  background-color: lightcoral;
+}

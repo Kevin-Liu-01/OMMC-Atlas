@@ -1,0 +1,38 @@
+.questionColumn {
+  display: block;
+  max-height: 10rem;
+  position: relative;
+  overflow: auto;
+}
+
+.questionInternal {
+  display: block;
+  flex: 100%;
+  position: relative;
+}
+
+.questionRow {
+  width: 450px;
+  position: relative;
+}
+
+.solutionRow {
+  width: 250px;
+  position: relative;
+}
+
+.dropDown {
+  font-weight: bold;
+}
+
+.heroIcon {
+  display: inline-block;
+
+  width: 20px;
+}
+
+.heroForm {
+  flex: 100%;
+
+  display: inline-block;
+}
