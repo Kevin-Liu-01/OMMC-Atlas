@@ -113,28 +113,30 @@ const App = () => {
         />
       </head>
       <div className="App">
-        <Navbar />
         <div>
-          <Route exact path="/">
-            <RecordList />
-          </Route>
+          <Navbar />
+          <div>
+            <Route exact path="/">
+              <RecordList />
+            </Route>
 
-          <Route path="/edit/:id" component={Edit} />
-          <Route path="/view/:id" component={View} />
+            <Route path="/edit/:id" component={Edit} />
+            <Route path="/view/:id" component={View} />
 
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
 
-          <Route path="/create">
-            <Create />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
+            <Route path="/create">
+              <Create />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </div>
         </div>
       </div>
     </SignUpContext.Provider>

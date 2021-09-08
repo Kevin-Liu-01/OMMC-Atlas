@@ -15,25 +15,43 @@ const Record = (props) => {
   return (
     <tr>
       <td className="questionColumn">
-        <div className="questionInternal">
-          <Latex>{props.record.question_name}</Latex>
-        </div>
+        <Link to={"/view/" + props.record._id}>
+          <div className="questionInternal">
+            <Latex>{props.record.question_name}</Latex>
+          </div>
+        </Link>
       </td>
-      <td>
+      <td className="solutionColumn">
         {showAnswer === true && (
-          <button onClick={() => setShowAnswer(false)}>View</button>
+          <div style={{ textAlign: "center" }}>
+            <button onClick={() => setShowAnswer(false)}>View</button>
+          </div>
         )}
         {showAnswer === false && (
-          <Latex>{props.record.question_position}</Latex>
+          <div className="solutionInternal">
+            <Latex>{props.record.question_position}</Latex>
+          </div>
         )}
       </td>
-      <td>{props.record.question_level}</td>
-      <td>{props.record.question_topic}</td>
-      <td>{props.record.question_comp}</td>
+      <td className="tableColumnElement">
+        <Link to={"/view/" + props.record._id}>
+          <div className="tableLinkElement">{props.record.question_level}</div>
+        </Link>
+      </td>
+      <td className="tableColumnElement">
+        <Link to={"/view/" + props.record._id}>
+          <div className="tableLinkElement">{props.record.question_topic}</div>
+        </Link>
+      </td>
+      <td className="tableColumnElement">
+        <Link to={"/view/" + props.record._id}>
+          <div className="tableLinkElement">{props.record.question_comp}</div>
+        </Link>
+      </td>
 
-      <td>
+      <td style={{ textAlign: "center" }}>
         <Link to={"/edit/" + props.record._id}>Edit</Link> |
-        <Link to={"/view/" + props.record._id}> Expand</Link> |
+        <Link to={"/view/" + props.record._id}> Click to expand</Link> |
         <a
           href="/"
           onClick={() => {
@@ -293,19 +311,23 @@ const RecordList = (props) => {
             rel="stylesheet"
           />
         </head>
-        <table className="table table-striped" style={{ marginTop: 20 }}>
-          <thead>
+        <table
+          className="table table-striped table-hover"
+          id="questionTable"
+          style={{ marginTop: 20 }}
+        >
+          <thead className="tableHead">
             <tr>
               <th className="questionRow">Question</th>
               <th className="solutionRow">Solution</th>
-              <th>
+              <th className="dropDowns">
                 <DifficultyDropdown />
               </th>
-              <th>
+              <th className="dropDowns">
                 <TopicDropdown />
               </th>
-              <th>Year</th>
-              <th>Action</th>
+              <th className="dropDowns">Year</th>
+              <th className="dropDowns">Action</th>
             </tr>
           </thead>
           <tbody>{filterBody()}</tbody>

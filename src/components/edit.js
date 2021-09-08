@@ -104,6 +104,7 @@ const Edit = (props) => {
         <div className="form-group">
           <label>Solution: </label>
           <input
+            style={{ maxWidth: "", maxheight: "15rem" }}
             type="text"
             className="form-control"
             value={question_position}

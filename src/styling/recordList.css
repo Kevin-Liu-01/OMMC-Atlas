@@ -1,23 +1,56 @@
 .questionColumn {
   display: block;
-  max-height: 10rem;
   position: relative;
   overflow: auto;
+  flex: 100%;
+}
+
+.solutionColumn {
+  position: relative;
+  overflow: auto;
+  flex: 100%;
 }
 
 .questionInternal {
-  display: block;
+  min-height: 7rem;
+  max-height: 7rem;
+  width: 24rem;
+  min-width: 100%;
+  max-width: 100%;
   flex: 100%;
   position: relative;
+  color: black;
+  text-decoration: none;
 }
+.solutionInternal {
+  overflow: auto;
+  min-height: 7rem;
+  max-height: 7rem;
+  width: 24rem;
 
+  min-width: 100%;
+  max-width: 100%;
+  flex: 100%;
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+.questionColumn a:hover {
+  text-decoration: none;
+}
 .questionRow {
-  width: 450px;
+  min-width: 18rem;
+  max-width: 18rem;
+  flex: 100%;
+  text-align: center;
   position: relative;
 }
 
 .solutionRow {
-  width: 250px;
+  min-width: 18rem;
+  max-width: 18rem;
+  flex: 100%;
+  text-align: center;
   position: relative;
 }
 
@@ -35,4 +68,27 @@
   flex: 100%;
 
   display: inline-block;
+}
+
+#questionTable {
+  border: 0.2rem solid gray;
+  border-radius: 50px !important;
+}
+
+.tableHead {
+  border-radius: 50px !important;
+}
+
+.tableLinkElement {
+  color: black;
+  text-align: center;
+}
+
+.tableColumnElement a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.dropDowns {
+  text-align: center;
 }
