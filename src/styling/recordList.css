@@ -55,13 +55,16 @@
 }
 
 .dropDown {
+  background-color: #f0f0f0;
+  border-radius: 5px;
   font-weight: bold;
+  border: 0.1rem solid black;
 }
 
 .heroIcon {
   display: inline-block;
-
   width: 20px;
+  margin-right: 5px;
 }
 
 .heroForm {
@@ -72,11 +75,20 @@
 
 #questionTable {
   border: 0.2rem solid gray;
-  border-radius: 50px !important;
+  border-radius: 0.5rem;
+  margin-bottom: 2.6rem;
+  background-color: rgb(243, 243, 243);
+}
+#questionTable tr:nth-child(even) {
+  background-color: #d8d8d8;
+}
+.tableBody {
+  overflow: auto;
 }
 
 .tableHead {
-  border-radius: 50px !important;
+  background-color: rgb(199, 174, 174);
+  border-radius: 5px;
 }
 
 .tableLinkElement {
@@ -91,4 +103,45 @@
 
 .dropDowns {
   text-align: center;
+}
+
+.SearchInput {
+  width: 50rem;
+  margin: 5px;
+  border-radius: 5px;
+  position: relative;
+  flex: 100%;
+}
+
+.ListContent {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.AtlasDatabaseHeader {
+  font-size: 1.7rem;
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  /* background-color: #e54a54;
+  border: 0.2rem solid gray; */
+  width: 25rem;
+  border-radius: 5px;
+  position: relative;
+  flex: 100%;
+}
+
+.searchForm {
+  border: 0.2rem solid gray;
+  border-radius: 7px;
+  height: 47px;
+
+  background-color: lightgray;
+  text-align: center;
+}
+
+.viewQuestion {
+  border-radius: 4px;
+  background-color: #d8d8d8;
 }

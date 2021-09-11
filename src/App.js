@@ -12,6 +12,8 @@ import Login from "./components/login";
 import Signup from "./components/signup";
 import Profile from "./components/profile";
 import View from "./components/view";
+import Footer from "./components/footer";
+
 import "./styling/app.css";
 
 import { SignUpContext } from "./context/signUpContext";
@@ -113,7 +115,7 @@ const App = () => {
         />
       </head>
       <div className="App">
-        <div>
+        <div style={{ backgroundColor: "#c9424b" }}>
           <Navbar />
           <div>
             <Route exact path="/">
@@ -138,6 +140,7 @@ const App = () => {
             </Route>
           </div>
         </div>
+        <Footer />
       </div>
     </SignUpContext.Provider>
   );

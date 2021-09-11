@@ -21,9 +21,16 @@ const Navbar = () => {
           rel="stylesheet"
         />
       </head>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav id="navBar" className="navbar navbar-expand-lg navbar-light ">
         <NavLink className="navbar-brand" id="navbarElement" to="/">
-          OMMC Atlas
+          <img
+            className="ommcImage"
+            alt="OMMC Website"
+            src="https://media.discordapp.net/attachments/778356169223700481/785890106489438269/fixup2.png"
+          ></img>
+        </NavLink>
+        <NavLink className="navbar-brand" id="navbarElement" to="/">
+          <div id="atlasLogo">OMMC Atlas</div>
         </NavLink>
         <button
           className="navbar-toggler"

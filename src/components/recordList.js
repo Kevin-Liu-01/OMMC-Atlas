@@ -24,7 +24,12 @@ const Record = (props) => {
       <td className="solutionColumn">
         {showAnswer === true && (
           <div style={{ textAlign: "center" }}>
-            <button onClick={() => setShowAnswer(false)}>View</button>
+            <button
+              className="viewQuestion"
+              onClick={() => setShowAnswer(false)}
+            >
+              View
+            </button>
           </div>
         )}
         {showAnswer === false && (
@@ -312,7 +317,7 @@ const RecordList = (props) => {
           />
         </head>
         <table
-          className="table table-striped table-hover"
+          className="table table-hover"
           id="questionTable"
           style={{ marginTop: 20 }}
         >
@@ -330,7 +335,7 @@ const RecordList = (props) => {
               <th className="dropDowns">Action</th>
             </tr>
           </thead>
-          <tbody>{filterBody()}</tbody>
+          <tbody className="tableBody">{filterBody()}</tbody>
         </table>
         {questions.length === 0 && (
           <div style={{ textAlign: "center" }}>
@@ -345,45 +350,49 @@ const RecordList = (props) => {
   // This following section will display the table with the records of individuals.
   return (
     <div className="RecordListContent">
-      <h3 align="center">Atlas Database</h3>
-      <div>
-        <div className="heroIcon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            id="search"
-          >
-            <path
-              id="search"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-
-        <form className="heroForm">
-          <input
-            className="SearchInput"
-            type="search"
-            onChange={(e) => {
-              setSearchInput(e.target.value);
-              searchData();
-            }}
-            onKeyDown={(e) => {
-              setSearchInput(e.target.value);
-              searchData();
-            }}
-            value={searchInput}
-            placeholder="Search for a question"
-          />
-        </form>
+      <div align="center">
+        <div className="AtlasDatabaseHeader">Atlas Database</div>
       </div>
-      <div>{listBody()}</div>
+      <div className="ListContent">
+        <div className="searchForm">
+          <div className="heroIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              id="search"
+            >
+              <path
+                id="search"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+
+          <form className="heroForm">
+            <input
+              className="SearchInput"
+              type="search"
+              onChange={(e) => {
+                setSearchInput(e.target.value);
+                searchData();
+              }}
+              onKeyDown={(e) => {
+                setSearchInput(e.target.value);
+                searchData();
+              }}
+              value={searchInput}
+              placeholder="Search for a specific question from the database"
+            />
+          </form>
+        </div>
+        <div style={{ backgroundColor: "white" }}>{listBody()}</div>
+      </div>
     </div>
   );
 };
