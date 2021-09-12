@@ -1,5 +1,4 @@
 .questionColumn {
-  display: block;
   position: relative;
   overflow: auto;
   flex: 100%;
@@ -14,10 +13,6 @@
 .questionInternal {
   min-height: 7rem;
   max-height: 7rem;
-  width: 24rem;
-  min-width: 100%;
-  max-width: 100%;
-  flex: 100%;
   position: relative;
   color: black;
   text-decoration: none;
@@ -26,11 +21,6 @@
   overflow: auto;
   min-height: 7rem;
   max-height: 7rem;
-  width: 24rem;
-
-  min-width: 100%;
-  max-width: 100%;
-  flex: 100%;
   position: relative;
   color: black;
   text-decoration: none;
@@ -39,17 +29,11 @@
   text-decoration: none;
 }
 .questionRow {
-  min-width: 18rem;
-  max-width: 18rem;
-  flex: 100%;
   text-align: center;
   position: relative;
 }
 
 .solutionRow {
-  min-width: 18rem;
-  max-width: 18rem;
-  flex: 100%;
   text-align: center;
   position: relative;
 }
@@ -59,33 +43,44 @@
   border-radius: 5px;
   font-weight: bold;
   border: 0.1rem solid black;
+  display: block;
+  text-align: center;
+
+  width: 60%;
 }
 
 .heroIcon {
   display: inline-block;
-  width: 20px;
+  width: 1.3rem;
   margin-right: 5px;
+  position: relative;
 }
 
 .heroForm {
   flex: 100%;
-
+  position: relative;
   display: inline-block;
 }
 
 #questionTable {
   border: 0.2rem solid gray;
   border-radius: 0.5rem;
-  margin-bottom: 2.6rem;
+  margin-bottom: 0rem;
   background-color: rgb(243, 243, 243);
 }
 #questionTable tr:nth-child(even) {
   background-color: #d8d8d8;
 }
 .tableBody {
-  overflow: auto;
+  max-height: 48vh;
+  display: block;
+  overflow: scroll;
 }
-
+.headerRow {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
 .tableHead {
   background-color: rgb(199, 174, 174);
   border-radius: 5px;
@@ -94,6 +89,7 @@
 .tableLinkElement {
   color: black;
   text-align: center;
+  flex: 100%;
 }
 
 .tableColumnElement a:hover {
@@ -105,12 +101,18 @@
   text-align: center;
 }
 
+.SearchContent {
+  width: 100%;
+  display: flex;
+}
+
 .SearchInput {
-  width: 50rem;
-  margin: 5px;
   border-radius: 5px;
-  position: relative;
   flex: 100%;
+  display: flex;
+  margin: 0.4rem;
+  min-width: 20%;
+  width: 25rem;
 }
 
 .ListContent {
@@ -122,21 +124,25 @@
 .AtlasDatabaseHeader {
   font-size: 1.7rem;
   color: white;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   margin-bottom: 2%;
   /* background-color: #e54a54;
   border: 0.2rem solid gray; */
-  width: 25rem;
+  /* width: 25rem; */
+  background-color: rgb(199, 174, 174);
+
   border-radius: 5px;
   position: relative;
   flex: 100%;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.searchForm {
+.searchBackground {
   border: 0.2rem solid gray;
   border-radius: 7px;
-  height: 47px;
-
+  height: 3rem;
   background-color: lightgray;
   text-align: center;
 }
@@ -144,4 +150,15 @@
 .viewQuestion {
   border-radius: 4px;
   background-color: #d8d8d8;
+}
+
+.serverError {
+  background-color: #ececec;
+  width: auto;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  border: 0.2rem solid gray;
+  color: darkred;
+  padding-top: 2rem;
 }

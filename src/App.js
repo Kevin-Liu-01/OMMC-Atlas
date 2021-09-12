@@ -139,8 +139,8 @@ const App = () => {
               <Login />
             </Route>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </SignUpContext.Provider>
   );

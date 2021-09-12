@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { withRouter } from "react-router";
 import { SignUpContext } from "../context/signUpContext";
+import "../styling/profile.css";
 
 const Profile = (props) => {
   const { setSignInStatus, username, email, setCookie } =
@@ -14,18 +15,30 @@ const Profile = (props) => {
   if (username === "") {
     return (
       <div>
-        <h3>Profile</h3>
+        <div className="ProfileHeader">Profile</div>
         <div>You are not logged in. Please sign up or log in.</div>
       </div>
     );
   } else {
     return (
       <div>
-        <h3>Profile</h3>
-        <h2>{username}</h2>
-        <button onClick={() => (onClick(), props.history.push("/"))}>
-          Sign out
-        </button>
+        <div className="ProfileContainer">
+          <div className="ProfileHeader">{username}'s Profile</div>
+        </div>
+        <div className="ProfileBody">
+          <div>
+            <div>Email: {email}</div>
+            <div>Favorited questions: {}</div>
+          </div>
+          <div>
+            <button
+              className="signoutButton"
+              onClick={() => (onClick(), props.history.push("/"))}
+            >
+              Sign out
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

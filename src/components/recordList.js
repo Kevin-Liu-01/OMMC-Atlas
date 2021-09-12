@@ -13,7 +13,7 @@ let Latex = require("react-latex");
 const Record = (props) => {
   const [showAnswer, setShowAnswer] = useState(true);
   return (
-    <tr>
+    <tr className="headerRow">
       <td className="questionColumn">
         <Link to={"/view/" + props.record._id}>
           <div className="questionInternal">
@@ -28,7 +28,7 @@ const Record = (props) => {
               className="viewQuestion"
               onClick={() => setShowAnswer(false)}
             >
-              View
+              View Solution
             </button>
           </div>
         )}
@@ -56,7 +56,8 @@ const Record = (props) => {
 
       <td style={{ textAlign: "center" }}>
         <Link to={"/edit/" + props.record._id}>Edit</Link> |
-        <Link to={"/view/" + props.record._id}> Click to expand</Link> |
+        <Link to={"/view/" + props.record._id}> Click to expand</Link>
+        {/* |
         <a
           href="/"
           onClick={() => {
@@ -64,7 +65,7 @@ const Record = (props) => {
           }}
         >
           Delete
-        </a>
+        </a> */}
       </td>
     </tr>
   );
@@ -322,14 +323,18 @@ const RecordList = (props) => {
           style={{ marginTop: 20 }}
         >
           <thead className="tableHead">
-            <tr>
+            <tr className="headerRow">
               <th className="questionRow">Question</th>
               <th className="solutionRow">Solution</th>
               <th className="dropDowns">
-                <DifficultyDropdown />
+                <div align="center">
+                  <DifficultyDropdown />
+                </div>
               </th>
               <th className="dropDowns">
-                <TopicDropdown />
+                <div align="center">
+                  <TopicDropdown />
+                </div>
               </th>
               <th className="dropDowns">Year</th>
               <th className="dropDowns">Action</th>
@@ -338,9 +343,13 @@ const RecordList = (props) => {
           <tbody className="tableBody">{filterBody()}</tbody>
         </table>
         {questions.length === 0 && (
-          <div style={{ textAlign: "center" }}>
-            Due to a server error, questions were not able to be retreived.
-            Contact the server admin through OMMC Discord to resolve the issue.
+          <div>
+            <div className="serverError">
+              Due to a server error, questions were not able to be retreived.
+              Contact the server admin through OMMC Discord to resolve the
+              issue.
+            </div>
+            <div></div>
           </div>
         )}
       </div>
@@ -354,42 +363,44 @@ const RecordList = (props) => {
         <div className="AtlasDatabaseHeader">Atlas Database</div>
       </div>
       <div className="ListContent">
-        <div className="searchForm">
-          <div className="heroIcon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              id="search"
-            >
-              <path
+        <div className="searchBackground">
+          <div classname="SearchContent">
+            <div className="heroIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
                 id="search"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </div>
+              >
+                <path
+                  id="search"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
 
-          <form className="heroForm">
-            <input
-              className="SearchInput"
-              type="search"
-              onChange={(e) => {
-                setSearchInput(e.target.value);
-                searchData();
-              }}
-              onKeyDown={(e) => {
-                setSearchInput(e.target.value);
-                searchData();
-              }}
-              value={searchInput}
-              placeholder="Search for a specific question from the database"
-            />
-          </form>
+            <form className="heroForm">
+              <input
+                className="SearchInput"
+                type="search"
+                onChange={(e) => {
+                  setSearchInput(e.target.value);
+                  searchData();
+                }}
+                onKeyDown={(e) => {
+                  setSearchInput(e.target.value);
+                  searchData();
+                }}
+                value={searchInput}
+                placeholder="Search for a specific question from the database"
+              />
+            </form>
+          </div>
         </div>
         <div style={{ backgroundColor: "white" }}>{listBody()}</div>
       </div>

@@ -1,0 +1,28 @@
+.ProfileContainer {
+  background-color: rgb(199, 174, 174);
+  color: white;
+  height: 8rem;
+}
+
+.ProfileHeader {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.ProfileBody {
+  padding: 2rem;
+  text-align: center;
+  border: 0.2rem solid gray;
+  font-size: 1.5rem;
+  /* border-radius: 0.5rem; */
+  margin-bottom: 0rem;
+  background-color: rgb(196, 196, 196);
+}
+
+.signoutButton {
+  margin-top: 2rem;
+  border: 0.2rem solid gray;
+  border-radius: 0.5rem;
+}
