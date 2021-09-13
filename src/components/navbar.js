@@ -22,13 +22,17 @@ const Navbar = () => {
         />
       </head>
       <nav id="navBar" className="navbar navbar-expand-lg navbar-light ">
-        <NavLink className="navbar-brand" id="navbarElement" to="/">
+        <a
+          className="navbar-brand"
+          id="navbarElement"
+          href="http://www.ommcofficial.org"
+        >
           <img
             className="ommcImage"
             alt="OMMC Website"
             src="https://media.discordapp.net/attachments/778356169223700481/785890106489438269/fixup2.png"
           ></img>
-        </NavLink>
+        </a>
         <NavLink className="navbar-brand" id="navbarElement" to="/">
           <div id="atlasLogo">OMMC Atlas</div>
         </NavLink>
