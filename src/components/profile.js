@@ -26,10 +26,10 @@ const Profile = (props) => {
         <div className="ProfileBody">
           <div>
             <div className="bodyContents">
-              <div>Email: {email}</div>
+              <div className="emailContainer">Email: {email}</div>
               <p></p>
-              <div>
-                Favorited questions:
+              <div className="FavoritedContainer">
+                <div style={{ fontWeight: "bold" }}>Favorited questions:</div>
                 {0 === 1 && (
                   <div>
                     <div className="">{}</div>
@@ -37,7 +37,7 @@ const Profile = (props) => {
                 )}
                 {true && (
                   <div>
-                    <div className="">No favorited questions</div>
+                    <div className="">No favorited questions (Feature TBA)</div>
                   </div>
                 )}
               </div>
@@ -47,7 +47,7 @@ const Profile = (props) => {
                 className="signoutButton"
                 onClick={() => (onClick(), props.history.push("/"))}
               >
-                Sign out
+                Sign Out
               </button>
             </div>
           </div>

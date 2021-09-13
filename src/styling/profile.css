@@ -2,6 +2,11 @@
   display: flex;
   min-height: 100vh;
 }
+.emailContainer {
+  border-radius: 0.5rem;
+  background-color: rgb(236, 236, 236);
+  font-weight: bold;
+}
 
 .ProfileHeader {
   background-image: linear-gradient(to right, rgb(199, 174, 174), white);
@@ -35,4 +40,9 @@
   padding: 2rem;
   background-color: rgb(199, 199, 199);
   border-radius: 0.9rem;
+}
+
+.FavoritedContainer {
+  border-radius: 0.5rem;
+  background-color: rgb(236, 236, 236);
 }
