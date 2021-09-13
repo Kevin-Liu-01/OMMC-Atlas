@@ -4,6 +4,13 @@
   flex: 100%;
 }
 
+.recordListContent {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  min-height: 100vh;
+}
+
 .solutionColumn {
   position: relative;
   overflow: auto;
@@ -42,9 +49,8 @@
   background-color: #f0f0f0;
   border-radius: 5px;
   font-weight: bold;
-  border: 0.1rem solid black;
+  border: 0.1rem solid gray;
   display: block;
-  text-align: center;
 
   width: 60%;
 }
@@ -57,24 +63,25 @@
 }
 
 .heroForm {
-  flex: 100%;
   position: relative;
   display: inline-block;
 }
 
 #questionTable {
-  border: 0.2rem solid gray;
+  border: 0.1rem solid gray;
   border-radius: 0.5rem;
-  margin-bottom: 0rem;
   background-color: rgb(243, 243, 243);
+  margin-bottom: 2rem;
 }
 #questionTable tr:nth-child(even) {
   background-color: #d8d8d8;
 }
 .tableBody {
-  max-height: 48vh;
+  height: 34rem;
+  max-height: 34rem;
   display: block;
   overflow: scroll;
+  border: 0.1rem solid lightgray;
 }
 .headerRow {
   display: table;
@@ -102,20 +109,20 @@
 }
 
 .SearchContent {
-  width: 100%;
+  width: 70%;
   display: flex;
 }
 
 .SearchInput {
   border-radius: 5px;
-  flex: 100%;
   display: flex;
   margin: 0.4rem;
-  min-width: 20%;
   width: 25rem;
+  border: none;
 }
 
 .ListContent {
+  flex: 1 1 auto;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
@@ -123,15 +130,14 @@
 
 .AtlasDatabaseHeader {
   font-size: 1.7rem;
-  color: white;
+  color: rgb(49, 49, 49);
   /* margin-top: 2%; */
   margin-bottom: 2%;
   /* background-color: #e54a54;
   border: 0.2rem solid gray; */
   /* width: 25rem; */
-  background-color: rgb(199, 174, 174);
-
-  border-radius: 5px;
+  background-image: linear-gradient(to right, rgb(199, 174, 174), lightgray);
+  font-weight: bold;
   position: relative;
   flex: 100%;
 
@@ -140,9 +146,9 @@
 }
 
 .searchBackground {
-  border: 0.2rem solid gray;
+  border: 0.15rem solid gray;
   border-radius: 7px;
-  height: 3rem;
+  height: 4%;
   background-color: lightgray;
   text-align: center;
 }
@@ -158,7 +164,7 @@
   font-size: 1.2rem;
   padding-bottom: 2rem;
   text-align: center;
-  border: 0.2rem solid gray;
+  border: 0.1rem solid gray;
   color: darkred;
   padding-top: 2rem;
 }

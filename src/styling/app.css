@@ -1,10 +1,10 @@
 .App {
   font-family: "Heebo", sans-serif;
   min-height: 100vh;
+
   background: #c9424b;
   margin: 0px;
   padding: 0px;
-
   overflow: auto;
   position: relative;
 }

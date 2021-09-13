@@ -21,22 +21,35 @@ const Profile = (props) => {
     );
   } else {
     return (
-      <div>
-        <div className="ProfileContainer">
-          <div className="ProfileHeader">{username}'s Profile</div>
-        </div>
+      <div class="ProfileContainer">
+        <div className="ProfileHeader">{username}'s Profile</div>
         <div className="ProfileBody">
           <div>
-            <div>Email: {email}</div>
-            <div>Favorited questions: {}</div>
-          </div>
-          <div>
-            <button
-              className="signoutButton"
-              onClick={() => (onClick(), props.history.push("/"))}
-            >
-              Sign out
-            </button>
+            <div className="bodyContents">
+              <div>Email: {email}</div>
+              <p></p>
+              <div>
+                Favorited questions:
+                {0 === 1 && (
+                  <div>
+                    <div className="">{}</div>
+                  </div>
+                )}
+                {true && (
+                  <div>
+                    <div className="">No favorited questions</div>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div>
+              <button
+                className="signoutButton"
+                onClick={() => (onClick(), props.history.push("/"))}
+              >
+                Sign out
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -22,8 +22,8 @@ const Footer = () => {
       </head>
       <footer className="footer" align="center">
         <div className="footerContent">
-          <div>Made by Kevin Liu for OMMC</div>
-          <p></p>
+          {/* <div>Made by Kevin Liu for OMMC</div>
+          <p></p> */}
           <div style={{ fontSize: "0.9rem" }}>
             <a href="http://www.ommcofficial.org/terms">Terms of Service</a> ·{" "}
             <a href="http://www.ommcofficial.org/faq">FAQs</a> ·{" "}

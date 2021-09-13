@@ -7,8 +7,9 @@
 }
 
 #navBar {
-  background-color: #f5f5f5;
+  background-image: linear-gradient(to right, lightgray, #f5f5f5);
 }
 
 #atlasLogo {
+  font-weight: bold;
 }

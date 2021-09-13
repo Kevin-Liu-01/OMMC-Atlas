@@ -1,34 +1,79 @@
 .Form {
-  width: 30%;
-  height: 50%;
+  width: 22rem;
+  height: 25rem;
   background-color: lightgray;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 20px;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
 }
 .SignUpPage {
-  text-align: center;
-  background-color: darkgray;
-  width: 100vw;
-  height: 100vh;
+  background-color: #c9424b;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
-
+.inputs {
+  text-align: center;
+}
 .Form #submit {
   background-color: salmon;
+  flex: 100%;
+  border: none;
+  border-radius: 7px;
+}
+.Form #logInsubmit {
+  background-color: whitesmoke;
+  flex: 100%;
+  border: none;
+  border-radius: 7px;
 }
 
 .Form .inputs .ErrorMessage {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-
   cursor: pointer;
-
   color: #b70c13;
 }
 
 .Form .inputs .ErrorState {
   background-color: lightcoral;
+  border: lightcoral;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.DefaultForm {
+  border: 0.2rem solid white;
+  border-radius: 7px;
+  display: inline-flex;
+  flex: 100%;
+  width: 70%;
+}
+
+.heroIcons {
+  width: 10%;
+  display: inline-block;
+  margin-right: 0.6rem;
+  color: gray;
+}
+
+.formElement {
+  /* border: 0.2rem solid gray; */
+  border-radius: 7px;
+  background-color: white;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formElementContainer {
+  text-align: center;
+}
+
+.title {
+  margin-top: 10%;
+  font-weight: bold;
+  margin-bottom: 5%;
 }

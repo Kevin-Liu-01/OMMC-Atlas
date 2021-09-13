@@ -49,7 +49,7 @@ const Navbar = () => {
             {signInStatus ? (
               <li className="nav-item">
                 <NavLink id="navbarElement" className="nav-link" to="/profile">
-                  Welcome, {username}
+                  Welcome, <a style={{ fontWeight: "bold" }}>{username}</a>
                 </NavLink>
               </li>
             ) : (
