@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { withRouter } from "react-router";
 import Constants from "./config.js";
+import "../styling/view.css";
+
 let Latex = require("react-latex");
 
 const View = (props) => {
@@ -47,13 +49,39 @@ const View = (props) => {
           rel="stylesheet"
         />
       </head>
-      <h3>Question Content:</h3>
-      <Latex>{question_name}</Latex>
-      <h2>Question Solution:</h2>
-      {showAnswer === true && (
-        <button onClick={() => setShowAnswer(false)}>View</button>
-      )}
-      {showAnswer === false && <Latex>{question_position}</Latex>}
+      <div className="questionContainer">
+        <div className="columnContainer">
+          <div className="questionColumns">
+            <div className="header">Difficulty:</div> <p>{question_level}</p>
+          </div>
+          <div className="questionColumns">
+            <div className="header">Topic:</div> <p>{question_topic}</p>
+          </div>
+          <div className="questionColumns">
+            <div className="header">Year:</div> <p>{question_comp}</p>
+          </div>
+        </div>
+
+        <div className="content">
+          <div className="header">Question Content:</div>
+          <div className="questionBody">
+            <Latex>{question_name}</Latex>
+          </div>
+        </div>
+        <div className="solution">
+          <div className="header">Question Solution:</div>
+          {showAnswer === true && (
+            <button className="viewButton" onClick={() => setShowAnswer(false)}>
+              View Solution
+            </button>
+          )}
+          {showAnswer === false && (
+            <div className="questionBody">
+              <Latex>{question_position}</Latex>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

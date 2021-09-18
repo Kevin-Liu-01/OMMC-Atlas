@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="footerContent">
           {/* <div>Made by Kevin Liu for OMMC</div>
           <p></p> */}
-          <div>Version 1.1 - Production</div>
+          <div>Version 1.2 - Production</div>
           <div>Made by Kevin Liu for OMMC</div>
           <div style={{ fontSize: "0.9rem" }}>
             <a href="http://www.ommcofficial.org/terms">Terms of Service</a> ·{" "}

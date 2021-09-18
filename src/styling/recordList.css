@@ -115,7 +115,6 @@
 
 .SearchInput {
   border-radius: 5px;
-  display: flex;
   margin: 0.4rem;
   width: 25rem;
   border: none;
@@ -164,7 +163,17 @@
   font-size: 1.2rem;
   padding-bottom: 2rem;
   text-align: center;
-  border: 0.1rem solid gray;
   color: darkred;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
+  height: 100%;
+}
+
+.errorTitle {
+  background-color: #ececec;
+  padding-top: 0.5rem;
+
+  font-size: 1.7rem;
+  text-align: center;
+  color: darkred;
+  font-weight: bold;
 }

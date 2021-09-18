@@ -1,12 +1,13 @@
 .Form {
   width: 22rem;
-  height: 25rem;
+  height: 30rem;
   background-color: lightgray;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 2rem;
   border-radius: 1rem;
+  border: 0.15rem solid gray;
 }
 .SignUpPage {
   background-color: #c9424b;

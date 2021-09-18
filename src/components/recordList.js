@@ -340,18 +340,20 @@ const RecordList = (props) => {
               <th className="dropDowns">Action</th>
             </tr>
           </thead>
-          <tbody className="tableBody">{filterBody()}</tbody>
+          <tbody className="tableBody">
+            {filterBody()}
+            {questions.length === 0 && (
+              <div style={{ height: "100%" }}>
+                <div className="errorTitle">Error Code 01</div>
+                <div className="serverError">
+                  Due to a server error, questions were not able to be
+                  retreived. Contact the server admin through OMMC Discord to
+                  resolve the issue.
+                </div>
+              </div>
+            )}
+          </tbody>
         </table>
-        {questions.length === 0 && (
-          <div>
-            <div className="serverError">
-              Due to a server error, questions were not able to be retreived.
-              Contact the server admin through OMMC Discord to resolve the
-              issue.
-            </div>
-            <div></div>
-          </div>
-        )}
       </div>
     );
   }
