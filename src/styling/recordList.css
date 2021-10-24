@@ -78,7 +78,6 @@
 }
 .tableBody {
   height: 34rem;
-  max-height: 34rem;
   display: block;
   overflow: scroll;
   border: 0.1rem solid lightgray;

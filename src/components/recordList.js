@@ -55,8 +55,7 @@ const Record = (props) => {
       </td>
 
       <td style={{ textAlign: "center" }}>
-        <Link to={"/edit/" + props.record._id}>Edit</Link> |
-        <Link to={"/view/" + props.record._id}> Click to expand</Link>
+        <Link to={"/view/" + props.record._id}> Click to Expand</Link>
         {/* |
         <a
           href="/"
