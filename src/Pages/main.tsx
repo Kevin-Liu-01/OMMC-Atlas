@@ -6,15 +6,18 @@ import {
   ClockIcon,
   UserIcon,
   VariableIcon,
+  ArrowCircleRightIcon,
 } from "@heroicons/react/outline";
 import React from "react";
 
 let Latex = require("react-latex");
 
-function Main() {
+const Main = () => {
+  const equation =
+    "In equilateral triangle $XYZ$ with side length $10$, define points $A, B$ on $XY,$ points $C, D$ on $YZ,$ and points $E, F$ on $ZX$ such that $ABDE$ and $ACEF$ are rectangles. The area of hexagon $ABCDEF$ can be written as $sqrt{x}$ for some positive integer $x$. Find $x$.";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-24 md:min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800  drop-shadow-md">
+      <div className="relative -mt-24 md:min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 md:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
@@ -29,7 +32,7 @@ function Main() {
             <div className="my-auto text-center text-white">
               <div className="text-5xl md:text-7xl font-extrabold md:mt-0 mt-12 mb-10">
                 OMMC{" "}
-                <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent">
+                <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent duration-150 ease-in-out">
                   Atlas
                 </span>
               </div>
@@ -41,8 +44,9 @@ function Main() {
                 to help you succeed in OMMC.
               </div>
               <a href="/atlas">
-                <button className="mt-2 bg-white hover:bg-orange-300 text-gray-900 hover:text-orange-800 hover:scale-105 duration-150 ease-in-out shadow-orange-200/50 shadow-lg font-semibold text-xl rounded-md p-2 px-4">
-                  View the Atlas
+                <button className="mt-2 bg-orange-100 hover:bg-orange-200 text-gray-900 hover:text-orange-800 hover:scale-105 duration-150 ease-in-out shadow-orange-200/50 shadow-lg font-semibold text-xl rounded-md p-2 px-4">
+                  View the Atlas{" "}
+                  <ArrowCircleRightIcon className="inline mb-1 h-5 w-5 " />
                 </button>
               </a>
             </div>
@@ -53,7 +57,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className=" bg-slate-100 dark:bg-gray-900">
+      <div className=" bg-slate-100 dark:bg-gray-900  duration-150 ease-in-out">
         <div className="h-12 sm:h-20 md:h-24"></div>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="border-l-[15px] border-red-600 pl-4 text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100">
@@ -90,13 +94,7 @@ function Main() {
                             </div>
                             <div className="bg-gray-100 dark:bg-gray-300  rounded-lg overflow-hidden mb-3">
                               <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
-                                <Latex>
-                                  Robert tiles a 420420 x 420420 square grid
-                                  completely with 11 x 22 blocks, then notices
-                                  that the two diagonals of the grid pass
-                                  through a total of nn blocks. Find the sum of
-                                  all possible values of nn.
-                                </Latex>
+                                <Latex>{equation}</Latex>
                               </p>
                             </div>
                             <div className="flex mb-3">
@@ -161,6 +159,7 @@ function Main() {
                             <div className="align-middle inline-block min-w-full shadow overflow-hidden md:rounded-lg border-b dark:border-l border-gray-200 dark:border-black">
                               <div className="select-none min-w-full bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
                                 <img
+                                  className="hover:scale-105 duration-150 ease-in-out"
                                   src="https://cdn.discordapp.com/attachments/1044744976942243880/1045752873901891655/image.png"
                                   alt="OMMC Diagram"
                                 />
@@ -178,13 +177,13 @@ function Main() {
               <div className="md:flex-1 md:order-first md:pr-12 lg:pr-24">
                 <h3 className="font-bold text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
-                  <span className="rounded-lg px-1.5 bg-red-600 text-white select-none">
+                  <span className="rounded-lg px-1.5 bg-orange-500 text-white select-none">
                     Questions like?
                   </span>
                 </h3>
                 <p className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                   <div>
-                    <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-red-500 to-red-700">
+                    <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-orange-500 to-orange-600">
                       <VariableIcon className="w-6 h-6" />
                     </div>
                   </div>{" "}
@@ -215,34 +214,35 @@ function Main() {
               </div>{" "}
               <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-red-200 dark:bg-red-800 hidden xl:block"></div>
             </div>
-            <div className="md:flex-1 md:mt-0 mt-6">
-              <h3 className="border-l-[10px] pb-2 sm:pb-0 border-red-600 dark:border-red-900 pl-3 text-gray-900 text-[2rem] md:text-4xl leading-8 font-extrabold tracking-tight dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-700 ">
-                Join us on Discord!
+            <div className="md:flex-1 md:mt-0 my-10">
+              <h3 className="border-l-[10px] pb-2 sm:pb-0 border-[#5865F2] pl-3 text-gray-900 text-[2rem] md:text-3xl leading-8 font-bold tracking-tight dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-700 ">
+                Join us on{" "}
+                <span className="rounded-lg px-1.5 bg-[#5865F2] text-white select-none">
+                  Discord!
+                </span>
               </h3>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 ">
                 We highly recommend competitors join our Community Discord for
-                the latest updates on OMMC. There is no sign up process for OMMC
-                this year.
+                the latest updates on OMMC.
               </p>
               <div>
-                <div className="absolute mt-1 flex items-center justify-center h-12 w-12  text-white rounded-xl mb-4 bg-gradient-to-br  from-red-500 to-red-600">
+                <div className="absolute mt-1 flex items-center justify-center h-12 w-12  text-white rounded-xl mb-4 bg-gradient-to-br  from-[#5865F2] to-[#3f4fc8]">
                   <ClockIcon className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <p className="ml-16 max-w-2xl text-lg  text-gray-500 dark:text-gray-400 mt-10">
-                  Because the competition is untimed, we have chosen to let
-                  teams just fill out their registration information with their
-                  final submission. The test portal will be linked on this page
-                  during the testing period.
+                <p className="ml-16 max-w-2xl text-lg  text-gray-500 dark:text-gray-400 mt-7">
+                  We will be posting updates and announcements on the Discord,
+                  so make sure to join! We also host special events in addition
+                  to the standard competitions.
                 </p>
               </div>
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12  text-white rounded-xl mb-4 bg-gradient-to-br  from-red-500 to-red-600">
+                <div className="absolute flex items-center justify-center h-12 w-12  text-white rounded-xl mb-4 bg-gradient-to-br  from-[#5865F2] to-[#3f4fc8]">
                   <UserIcon className=" h-6 w-6" aria-hidden="true" />
                 </div>
-                <p className="ml-16 max-w-2xl text-lg text-gray-500 dark:text-gray-400 mt-10">
-                  Solo participants are allowed and will be treated simply as
-                  one man teams. They will be eligible for the same prizes as
-                  teams with multiple people.
+                <p className="ml-16 max-w-2xl text-lg text-gray-500 dark:text-gray-400 mt-7">
+                  The community Discord is a great way to meet other OMMC
+                  members and interact with the OMMC team. The Discord is a
+                  great place to ask for help or solve a problem.
                 </p>
               </dt>
             </div>
@@ -252,6 +252,6 @@ function Main() {
       </div>
     </div>
   );
-}
+};
 
 export default Main;

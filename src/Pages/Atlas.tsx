@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Constants from "./config.js";
+import Constants from "../config.js";
 import Fuse from "fuse.js";
 import { SearchIcon } from "@heroicons/react/outline";
 import Question from "../Components/AtlasComponents/Question.tsx";
@@ -17,6 +17,44 @@ const RecordList = (props) => {
   const [combinatorics, setComb] = useState(0);
   const [numberTheory, setNum] = useState(0);
   const [algebra, setAlg] = useState(0);
+
+  // This method will get the data from the database.
+  useEffect(() => {
+    axios
+      .get(`${Constants.SERVER_HOST}/record/`)
+      .then((response) => {
+        console.log(
+          `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
+        );
+        setQuestions(response.data);
+        setGeo(0);
+        setComb(0);
+        setNum(0);
+        setAlg(0);
+        listParser(response.data, "Geometry", setGeo, geometry);
+        listParser(response.data, "Combinatorics", setComb, combinatorics);
+        listParser(response.data, "Number Theory", setNum, numberTheory);
+        listParser(response.data, "Algebra", setAlg, algebra);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
+
+  // This method will delete a record based on the method
+  async function deleteRecord(id) {
+    // axios.delete(`${Constants.SERVER_HOST}/${id}`).then((response) => {
+    //   console.log(response.data);
+    // });
+
+    axios.post(`${Constants.SERVER_HOST}/delete/${id}`).then((response) => {
+      console.log(response.data);
+    });
+
+    console.log("Deleterecord is called");
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setQuestions(questions.filter((el) => el._id !== id));
+  }
 
   const searchData = () => {
     if (searchInput === "") {
@@ -61,44 +99,6 @@ const RecordList = (props) => {
     for (let i = 0; i < array.length; i++) {
       if (array[i].question_topic === topic) incrementFunction(increment++);
     }
-  }
-
-  // This method will get the data from the database.
-  useEffect(() => {
-    axios
-      .get(`${Constants.SERVER_HOST}/record/`)
-      .then((response) => {
-        console.log(
-          `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
-        );
-        setQuestions(response.data);
-        setGeo(0);
-        setComb(0);
-        setNum(0);
-        setAlg(0);
-        listParser(response.data, "Geometry", setGeo, geometry);
-        listParser(response.data, "Combinatorics", setComb, combinatorics);
-        listParser(response.data, "Number Theory", setNum, numberTheory);
-        listParser(response.data, "Algebra", setAlg, algebra);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, [difficultyFilter]);
-
-  // This method will delete a record based on the method
-  async function deleteRecord(id) {
-    // axios.delete(`${Constants.SERVER_HOST}/${id}`).then((response) => {
-    //   console.log(response.data);
-    // });
-
-    axios.post(`${Constants.SERVER_HOST}/delete/${id}`).then((response) => {
-      console.log(response.data);
-    });
-
-    console.log("Deleterecord is called");
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setQuestions(questions.filter((el) => el._id !== id));
   }
 
   // This method will map out the users on the table

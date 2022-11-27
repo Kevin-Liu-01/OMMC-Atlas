@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 // This will require to npm install axios
 import axios from "axios";
-import Constants from "./config.js";
+import Constants from "../config.js";
 import debounce from "lodash.debounce";
 
 const Create = (props) => {

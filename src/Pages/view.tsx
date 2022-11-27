@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Constants from "./config.js";
+import Constants from "../config.js";
 import { useParams } from "react-router-dom";
 import { ArrowCircleLeftIcon, CheckCircleIcon } from "@heroicons/react/outline";
 let Latex = require("react-latex");
@@ -15,7 +15,7 @@ const View = () => {
   const { id } = useParams();
 
   // or fallback UI
-  // This will get the record based on the id from the database.
+  // This will get the question based on the id from the database.
   useEffect(() => {
     console.log("View Called");
     axios
@@ -39,12 +39,6 @@ const View = () => {
 
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-gray-800">
-      <head>
-        <link
-          href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
-          rel="stylesheet"
-        />
-      </head>
       <div className="max-w-7xl mx-auto bg-white dark:bg-gray-800 p-4 sm:p-6 ">
         <div className="flex text-blue-700 dark:text-blue-400 font-medium text-2xl mb-3">
           {" "}

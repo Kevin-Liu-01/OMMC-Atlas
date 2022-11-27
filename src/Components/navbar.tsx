@@ -21,7 +21,7 @@ function Navbar(props) {
                 alt="OMMCLogo"
               />
               <div className="ml-2 my-2">
-                <span className="text-2xl font-extrabold text-white dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-rose-300 dark:to-rose-500 ">
+                <span className="text-2xl font-extrabold text-white dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-600 ">
                   <span className="hidden sm:inline">OMMC </span>Atlas
                 </span>
                 <div className="text-[0.5rem]  text-white border text-center border-white rounded-full ">
@@ -51,7 +51,7 @@ function Navbar(props) {
           </div>
           <div className="pl-4 md:mr-2 flex-shrink-0 ml-auto flex justify-self-end items-center select-none ">
             <button
-              className="flex bg-gray-800 rounded-xl px-1 py-1 hover:bg-gray-700 duration-150 ease-in-out text-gray-400 hover:text-gray-300"
+              className="flex bg-gray-800 rounded-xl px-1 py-1 hover:bg-gray-700 duration-150 ease-in-out text-gray-400 hover:text-orange-300"
               onClick={() => props.setDark(!props.dark)}
             >
               <div className="h-9 w-9 flex items-center justify-center">

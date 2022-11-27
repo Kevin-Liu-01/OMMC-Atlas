@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  StarIcon,
+  MailOpenIcon,
+  ArrowCircleRightIcon,
+} from "@heroicons/react/outline";
 import { SignUpContext } from "../context/signUpContext.tsx";
 
 const updates = [
@@ -68,13 +73,15 @@ const Profile = (props) => {
                 className="my-auto py-2 px-4 bg-orange-200 text-lg rounded-xl font-semibold hover:bg-orange-300 duration-150 ease-in-out"
                 onClick={() => (onClick(), props.history.push("/"))}
               >
-                Sign Out
+                Sign Out{" "}
+                <ArrowCircleRightIcon className="inline ml-1 mb-1 h-6 w-6 " />
               </button>
             </div>
           </div>
           <div className="mt-8 ">
             <div className="font-semibold text-3xl dark:text-white">
-              Favorited Questions - Under Construction
+              <StarIcon className="inline mb-1 h-6 w-6 " /> Favorited Questions
+              - Under Construction
             </div>
             <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 rounded-xl p-8 mt-4 drop-shadow-lg">
               <div className="col-span-2 bg-white p-4 rounded-xl text-xl dark:bg-gray-800 dark:text-white">
@@ -95,7 +102,8 @@ const Profile = (props) => {
           </div>
           <div className="mt-8 ">
             <div className="font-semibold text-3xl dark:text-white">
-              Updates From OMMC
+              <MailOpenIcon className="inline mb-1 h-6 w-6 " /> Updates From
+              OMMC
             </div>
             <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 rounded-xl p-8 mt-4 drop-shadow-lg">
               {updates.map((update) => (

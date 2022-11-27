@@ -3,16 +3,16 @@ import React, { useState, useEffect } from "react";
 // We use Route in order to define the different routes of our application
 import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
-import Navbar from "./Components/navbar.tsx";
-import Main from "./Pages/main.tsx";
-import Edit from "./Pages/edit";
-import Create from "./Pages/create";
-import RecordList from "./Pages/recordList.tsx";
-import Login from "./Pages/login.tsx";
-import Signup from "./Pages/signup.tsx";
-import Profile from "./Pages/profile.tsx";
-import View from "./Pages/view.tsx";
-import Footer from "./Components/footer.tsx";
+import Navbar from "./Components/Navbar.tsx";
+import Main from "./Pages/Main.tsx";
+import Edit from "./Pages/Edit";
+import Create from "./Pages/Create";
+import Atlas from "./Pages/Atlas.tsx";
+import Login from "./Pages/Login.tsx";
+import Signup from "./Pages/Signup.tsx";
+import Profile from "./Pages/Profile.tsx";
+import View from "./Pages/View.tsx";
+import Footer from "./Components/Footer.tsx";
 import { SignUpContext } from "./context/signUpContext.tsx";
 
 const App = () => {
@@ -103,7 +103,7 @@ const App = () => {
         <Navbar dark={dark} setDark={setDark} />
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          <Route path="/atlas" element={<RecordList />}></Route>
+          <Route path="/atlas" element={<Atlas />}></Route>
 
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/view/:id" element={<View />} />

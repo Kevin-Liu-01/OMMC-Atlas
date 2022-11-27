@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import Constants from "./config.js";
+import Constants from "../config.js";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";

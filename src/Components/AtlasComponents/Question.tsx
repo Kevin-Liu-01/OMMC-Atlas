@@ -12,7 +12,7 @@ const Question = (props) => {
         {props.record.question_comp}
       </div>
       <div className="bg-gray-100 dark:bg-gray-300  rounded-lg overflow-hidden mb-3">
-        <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
+        <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
           <Latex>{props.record.question_name}</Latex>
         </p>
       </div>
@@ -31,7 +31,7 @@ const Question = (props) => {
               Solution
             </div>
             <div className="bg-gray-100 dark:bg-gray-300 rounded-lg overflow-hidden">
-              <div className=" p-2 h-[7rem] overflow-auto text-xs md:text-base">
+              <div className="relative p-2 h-[7rem] overflow-auto text-xs md:text-base">
                 <Latex>{props.record.question_position}</Latex>
               </div>
             </div>

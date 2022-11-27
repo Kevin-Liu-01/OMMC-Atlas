@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // This will require to npm install axios
 import axios from "axios";
-import Constants from "./config.js";
+import Constants from "../config.js";
 
 const Edit = (props) => {
   // This is the constructor that stores the data.
