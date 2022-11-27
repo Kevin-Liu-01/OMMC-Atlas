@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 // We import NavLink to utilize the react router.
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
-import { SignUpContext } from "../context/signUpContext.tsx";
+import { SignUpContext } from "../../context/signUpContext.tsx";
 
 function Navbar(props) {
   const { signInStatus, username } = useContext(SignUpContext);

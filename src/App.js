@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 // We use Route in order to define the different routes of our application
 import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
-import Navbar from "./Components/Navbar.tsx";
+import Navbar from "./Components/AppComponents/Navbar.tsx";
 import Home from "./Pages/Home.tsx";
 import Edit from "./Pages/Editor";
 import Create from "./Pages/Creator";
@@ -12,7 +12,7 @@ import Login from "./Pages/Users/UserLogin.tsx";
 import Signup from "./Pages/Users/UserSignup.tsx";
 import Profile from "./Pages/Users/UserProfile.tsx";
 import View from "./Pages/Atlas/QuestionView.tsx";
-import Footer from "./Components/Footer.tsx";
+import Footer from "./Components/AppComponents/Footer.tsx";
 import { SignUpContext } from "./context/signUpContext.tsx";
 
 const App = () => {
