@@ -40,7 +40,7 @@ const Profile = (props) => {
   }
   if (username === "") {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 duration-150 overflow-hidden">
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-800 duration-150 overflow-hidden">
         <div className="p-8 max-w-7xl mx-auto ">
           <div className="flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl p-8 drop-shadow-lg">
             <div>
@@ -57,9 +57,9 @@ const Profile = (props) => {
     );
   } else {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 duration-150 overflow-hidden">
-        <div className="p-8 max-w-7xl mx-auto ">
-          <div className="flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl p-8 drop-shadow-lg">
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-800 duration-150 overflow-hidden">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto ">
+          <div className="md:flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl p-8 drop-shadow-lg">
             <div>
               <div className="font-semibold text-3xl text-white">
                 Welcome back, {username}
@@ -68,7 +68,7 @@ const Profile = (props) => {
                 Email: {email}
               </div>
             </div>
-            <div className="flex justify-self-end justify-center ml-auto">
+            <div className="mt-8 md:mt-0 md:flex justify-self-end justify-center md:ml-auto">
               <button
                 className="my-auto py-2 px-4 bg-orange-200 text-lg rounded-xl font-semibold hover:bg-orange-300 duration-150 ease-in-out"
                 onClick={() => (onClick(), props.history.push("/"))}

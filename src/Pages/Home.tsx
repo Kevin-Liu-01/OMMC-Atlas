@@ -17,7 +17,7 @@ const Home = () => {
     "In equilateral triangle $XYZ$ with side length $10$, define points $A, B$ on $XY,$ points $C, D$ on $YZ,$ and points $E, F$ on $ZX$ such that $ABDE$ and $ACEF$ are rectangles. The area of hexagon $ABCDEF$ can be written as $sqrt{x}$ for some positive integer $x$. Find $x$.";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-24 md:min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
+      <div className="relative -mt-7 md:-mt-20 md:min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 md:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
@@ -60,7 +60,7 @@ const Home = () => {
       <div className=" bg-slate-100 dark:bg-gray-900  duration-150 ease-in-out">
         <div className="h-12 sm:h-20 md:h-24"></div>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="border-l-[15px] border-red-600 pl-4 text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100">
+          <h2 className="pl-4 border-l-[15px] border-red-600 reveal text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100">
             <div className="dark:hidden">
               More about <span className="text-red-600">OMMC</span>
             </div>
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
           </h2>
           <div className="h-6 2xl:h-12"></div>
-          <p className="text-lg md:text-xl 2xl:text-2xl font-medium max-w-4xl leading-relaxed text-gray-700 dark:text-gray-400">
+          <p className="reveal text-lg md:text-xl 2xl:text-2xl font-medium max-w-4xl leading-relaxed text-gray-700 dark:text-gray-400">
             OMMC is a community of students who are passionate about math. This
             database seeks to collect and organize resources that will help you
             <span className="text-gray-900 font-bold dark:text-white">
@@ -78,9 +78,9 @@ const Home = () => {
             </span>{" "}
             and learn more about math.
           </p>
-          <div className="h-12 md:h-20 2xl:h-24"></div>
-          <div className="md:flex flex-col md:flex-row md:items-center">
-            <div className="block md:flex-1 md:w-0 relative md:pr-12 lg:pr-24">
+          <div className="h-20 2xl:h-28"></div>
+          <div className="reveal md:flex flex-col md:flex-row md:items-center">
+            <div className=" block md:flex-1 md:w-0 relative md:pr-12 lg:pr-24">
               <div className="relative z-10">
                 <div className="max-w-full overflow-hidden -mx-4">
                   <div className="min-w-[52rem] px-4">
@@ -125,7 +125,7 @@ const Home = () => {
               <div className="absolute top-0 bottom-0 w-36 bg-gradient-to-l from-slate-100 dark:from-gray-900 z-20 right-0 md:right-12 lg:right-24"></div>
               <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-red-200 dark:bg-red-800 hidden xl:block"></div>
             </div>
-            <div className="md:flex-1 mt-4 md:mt-0">
+            <div className=" md:flex-1 mt-4 md:mt-0">
               <h3 className="font-bold sm:my-0 my-6 text-3xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                 What is{" "}
                 <span className="rounded-lg px-1.5 bg-red-600 text-white select-none">
@@ -146,18 +146,18 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="h-0 md:h-20 2xl:h-24"></div>
-          <div className="hidden md:flex flex-col md:flex-row md:items-center">
+          <div className="h-20 2xl:h-28"></div>
+          <div className="reveal flex flex-col md:flex-row md:items-center">
             <div className="flex flex-col md:flex-row md:items-center">
-              <div className="block md:flex-1 md:w-0 relative">
+              <div className=" block md:flex-1 md:w-0 relative">
                 <div className="relative z-10">
                   <div className="max-w-full overflow-hidden -mx-4">
                     <div className="min-w-[36rem] px-4">
                       <div className="-mx-4 sm:-mx-6 md:mx-0">
                         <div className="flex flex-col mb-4">
-                          <div className="overflow-x-auto md:-mx-4 md:px-4 -my-2 py-2">
-                            <div className="align-middle inline-block min-w-full shadow overflow-hidden md:rounded-lg border-b dark:border-l border-gray-200 dark:border-black">
-                              <div className="select-none min-w-full bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
+                          <div className="ml-4 md:ml-0 overflow-x-auto md:-mx-4 md:px-4 -my-2 py-2">
+                            <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-lg border-b dark:border-l border-gray-200 dark:border-black">
+                              <div className=" select-none min-w-full bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
                                 <img
                                   className="hover:scale-105 duration-150 ease-in-out"
                                   src="https://cdn.discordapp.com/attachments/1044744976942243880/1045752873901891655/image.png"
@@ -172,10 +172,10 @@ const Home = () => {
                   </div>
                 </div>{" "}
                 <div className="absolute top-0 bottom-0 w-36 bg-gradient-to-l from-slate-100 dark:from-gray-900 z-20 right-0"></div>
-                <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-red-300 dark:bg-red-800"></div>
+                <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-orange-300 dark:bg-orange-800"></div>
               </div>
-              <div className="md:flex-1 md:order-first md:pr-12 lg:pr-24">
-                <h3 className="font-bold text-xl md:text-3xl text-gray-900 dark:text-gray-100">
+              <div className=" md:flex-1 md:order-first md:pr-12 lg:pr-24">
+                <h3 className="sm:my-0 my-6 font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
                   <span className="rounded-lg px-1.5 bg-orange-500 text-white select-none">
                     Questions like?
@@ -198,10 +198,10 @@ const Home = () => {
             </div>
           </div>
           <div className="h-12 md:h-20 2xl:h-24"></div>
-          <div className="flex flex-col md:flex-row md:items-center">
+          <div className="reveal flex flex-col md:flex-row md:items-center ">
             <div className="block md:flex-1 md:w-0 relative md:pr-12 lg:pr-24">
               <div className="relative z-10">
-                <div className="md:ml-0 md:mr-14 mt-10 sm:my-10">
+                <div className=" md:ml-0  mt-10 sm:my-10">
                   <iframe
                     title="DiscordLink"
                     src="https://discord.com/widget?id=796756256022200350&theme=dark"
@@ -212,10 +212,10 @@ const Home = () => {
                   ></iframe>
                 </div>
               </div>{" "}
-              <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-red-200 dark:bg-red-800 hidden xl:block"></div>
+              <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-[#3f4fc8] dark:bg-[#3f4fc8] hidden xl:block"></div>
             </div>
-            <div className="md:flex-1 md:mt-0 my-10">
-              <h3 className="border-l-[10px] pb-2 sm:pb-0 border-[#5865F2] pl-3 text-gray-900 text-[2rem] md:text-3xl leading-8 font-bold tracking-tight dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-700 ">
+            <div className=" md:flex-1 md:mt-0 my-10">
+              <h3 className="border-l-[10px] pb-2 sm:pb-0 border-[#5865F2] pl-3 text-gray-900 text-[2rem] md:text-3xl leading-8 font-bold tracking-tight dark:text-white">
                 Join us on{" "}
                 <span className="rounded-lg px-1.5 bg-[#5865F2] text-white select-none">
                   Discord!

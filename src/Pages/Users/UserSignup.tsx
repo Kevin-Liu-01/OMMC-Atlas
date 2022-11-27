@@ -104,7 +104,7 @@ function Signup(props) {
       setSignInStatus(true);
       console.log(signInStatus);
       console.log(res.data);
-      navigate("/");
+      navigate("/profile");
     });
     // signUpContext(true);
   };
@@ -186,7 +186,7 @@ function Signup(props) {
             </button>
           </form>
           <a href="/login">
-            <button className="mt-2">Or Log In</button>
+            <button className="mt-2 text-white">Or Log In</button>
           </a>
         </div>
       </div>

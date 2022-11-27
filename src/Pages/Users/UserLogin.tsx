@@ -108,7 +108,7 @@ function Login(props) {
         console.log("Response data object: " + JSON.stringify(res.data));
         setCookie("username=" + res.data.person_username);
         setCookie("email=" + res.data.person_email);
-        navigate("/");
+        navigate("/profile");
       }
     });
     // signUpContext(true);
@@ -197,7 +197,7 @@ function Login(props) {
             )}
           </form>
           <a href="/signup">
-            <button className="mt-2">Or Sign Up</button>
+            <button className="mt-2 text-white">Or Sign Up</button>
           </a>
         </div>
       </div>

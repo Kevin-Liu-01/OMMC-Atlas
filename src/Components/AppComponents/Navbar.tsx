@@ -7,7 +7,7 @@ function Navbar(props) {
   const { signInStatus, username } = useContext(SignUpContext);
 
   return (
-    <nav className="relative bg-gray-900 border-0  border-b-red-700 border-b-8 z-20 transition-height duration-300 ease-in-out">
+    <nav className="relative bg-slate-50 dark:bg-gray-900 border-0 shadow-md z-20 transition-height duration-300 ease-in-out">
       <div className="max-w-7xl py-3 mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16 ">
           <div className="flex-1 flex items-center  lg:items-stretch justify-start ">
@@ -21,29 +21,32 @@ function Navbar(props) {
                 alt="OMMCLogo"
               />
               <div className="ml-2 my-2">
-                <span className="text-2xl font-extrabold text-white dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-600 ">
+                <span className="text-2xl font-extrabold text-gray-800 dark:text-white dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-600 ">
                   <span className="hidden sm:inline">OMMC </span>Atlas
                 </span>
-                <div className="text-[0.5rem]  text-white border text-center border-white rounded-full ">
+                <div className="md:hidden text-[0.5rem] dark:text-white text-gray-800 border text-center border-gray-800 dark:border-white rounded-full ">
                   Version 2.0
                 </div>
               </div>
             </a>
           </div>
 
-          <div className="text-white">
+          <div className="text-gray-500 dark:text-white">
             {signInStatus ? (
               <div className="nav-item ">
                 <a className="nav-link md:text-lg" href="/profile">
                   Welcome,{" "}
-                  <span className="font-bold dark:text-red-600 text-red-500 duration-150 ease-in-out">
+                  <span className="font-bold dark:text-red-600 text-gray-900 duration-150 ease-in-out">
                     {username}
                   </span>
                 </a>
               </div>
             ) : (
               <div className="nav-item">
-                <a className="nav-link" href="/signup">
+                <a
+                  className="nav-link text-lg font-bold dark:text-gray-200 dark:hover:text-gray-100 hover:text-gray-600"
+                  href="/signup"
+                >
                   Sign Up
                 </a>
               </div>
@@ -51,7 +54,7 @@ function Navbar(props) {
           </div>
           <div className="pl-4 md:mr-2 flex-shrink-0 ml-auto flex justify-self-end items-center select-none ">
             <button
-              className="flex bg-gray-800 rounded-xl px-1 py-1 hover:bg-gray-700 duration-150 ease-in-out text-gray-400 hover:text-orange-300"
+              className="flex bg-gray-300 dark:bg-gray-800 rounded-xl px-1 py-1 hover:bg-gray-400 duration-150 ease-in-out text-white dark:hover:text-gray-800 hover:text-orange-300 dark:hover:bg-gray-700"
               onClick={() => props.setDark(!props.dark)}
             >
               <div className="h-9 w-9 flex items-center justify-center">
