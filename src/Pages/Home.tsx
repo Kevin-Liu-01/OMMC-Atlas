@@ -12,7 +12,7 @@ import React from "react";
 
 let Latex = require("react-latex");
 
-const Main = () => {
+const Home = () => {
   const equation =
     "In equilateral triangle $XYZ$ with side length $10$, define points $A, B$ on $XY,$ points $C, D$ on $YZ,$ and points $E, F$ on $ZX$ such that $ABDE$ and $ACEF$ are rectangles. The area of hexagon $ABCDEF$ can be written as $sqrt{x}$ for some positive integer $x$. Find $x$.";
   return (
@@ -254,4 +254,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

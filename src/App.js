@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
 import Navbar from "./Components/Navbar.tsx";
-import Main from "./Pages/Main.tsx";
+import Home from "./Pages/Home.tsx";
 import Edit from "./Pages/Edit";
 import Create from "./Pages/Create";
 import Atlas from "./Pages/Atlas.tsx";
@@ -102,7 +102,7 @@ const App = () => {
       <div className={dark ? "dark" : ""}>
         <Navbar dark={dark} setDark={setDark} />
         <Routes>
-          <Route path="/" element={<Main />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/atlas" element={<Atlas />}></Route>
 
           <Route path="/edit/:id" element={<Edit />} />
