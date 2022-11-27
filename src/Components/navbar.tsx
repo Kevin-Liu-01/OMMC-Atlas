@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 // We import NavLink to utilize the react router.
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
-import { SignUpContext } from "../context/signUpContext";
+import { SignUpContext } from "../context/signUpContext.tsx";
 
 function Navbar(props) {
   const { signInStatus, username } = useContext(SignUpContext);
@@ -36,7 +36,7 @@ function Navbar(props) {
               <div className="nav-item ">
                 <a className="nav-link md:text-lg" href="/profile">
                   Welcome,{" "}
-                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-rose-500">
+                  <span className="font-bold dark:text-red-600 text-red-500 duration-150 ease-in-out">
                     {username}
                   </span>
                 </a>

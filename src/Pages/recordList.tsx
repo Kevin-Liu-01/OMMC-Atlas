@@ -2,76 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Constants from "./config.js";
 import Fuse from "fuse.js";
-import {
-  SearchIcon,
-  CheckCircleIcon,
-  ArrowsExpandIcon,
-} from "@heroicons/react/outline";
-
-import "../styling/recordList.css";
-
-var Latex = require("react-latex");
-
-const Record = (props) => {
-  const [showAnswer, setShowAnswer] = useState(true);
-  return (
-    <div className="bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
-      <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
-        {" "}
-        {props.record.question_comp}
-      </div>
-      <div className="bg-gray-100 dark:bg-gray-300  rounded-lg overflow-hidden mb-3">
-        <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
-          <Latex>{props.record.question_name}</Latex>
-        </p>
-      </div>
-      <div className="mb-3">
-        {showAnswer === true && (
-          <button
-            className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
-            onClick={() => setShowAnswer(false)}
-          >
-            View Solution <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
-          </button>
-        )}
-        {showAnswer === false && (
-          <>
-            <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-1">
-              Solution
-            </div>
-            <div className="bg-gray-100 dark:bg-gray-300 rounded-lg overflow-hidden">
-              <div className=" p-2 h-[7rem] overflow-auto text-xs md:text-base">
-                <Latex>{props.record.question_position}</Latex>
-              </div>
-            </div>
-          </>
-        )}
-      </div>
-      <div className="mb-[0.625rem]">
-        <a
-          className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
-          href={"/view/" + props.record._id}
-        >
-          View Problem <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
-        </a>
-      </div>
-      <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300">
-        {props.record.question_topic}
-      </button>{" "}
-      <button className="ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-green-300">
-        {props.record.question_level}
-      </button>
-      {/* <a
-        href="/"
-        onClick={() => {
-          props.deleteRecord(props.record._id);
-        }}
-      >
-        Delete
-      </a> */}
-    </div>
-  );
-};
+import { SearchIcon } from "@heroicons/react/outline";
+import Question from "../Components/AtlasComponents/Question.tsx";
+import QuestionBody from "../Components/AtlasComponents/QuestionBody.tsx";
 
 const RecordList = (props) => {
   // This is the constructor that shall store our data retrieved from the database
@@ -172,7 +105,7 @@ const RecordList = (props) => {
   function recordList() {
     return questions.map((currentrecord) => {
       return (
-        <Record
+        <Question
           record={currentrecord}
           deleteRecord={deleteRecord}
           key={currentrecord._id}
@@ -191,7 +124,7 @@ const RecordList = (props) => {
 
       .map((currentrecord) => {
         return (
-          <Record
+          <Question
             record={currentrecord}
             deleteRecord={deleteRecord}
             key={currentrecord._id}
@@ -210,7 +143,7 @@ const RecordList = (props) => {
 
       .map((currentrecord) => {
         return (
-          <Record
+          <Question
             record={currentrecord}
             deleteRecord={deleteRecord}
             key={currentrecord._id}
@@ -229,7 +162,7 @@ const RecordList = (props) => {
 
       .map((currentrecord) => {
         return (
-          <Record
+          <Question
             record={currentrecord}
             deleteRecord={deleteRecord}
             key={currentrecord._id}
@@ -322,36 +255,10 @@ const RecordList = (props) => {
     }
   }
 
-  function listBody() {
-    return (
-      <div className=" rounded-lg overflow-hidden bg-gray-200">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-2 gap-2 overflow-y-scroll min-h-screen max-h-[72rem] border-2 border-gray-300 dark:border-gray-800 dark:bg-gray-800">
-          {filterBody()}
-          {questions.length === 0 && (
-            <div className="col-span-3 h-[100%] bg-gray-100 text-center text-red-700 pt-20 px-8">
-              <div className="text-5xl font-extrabold py-4">Error Code 01</div>
-              <div className=" text-xl max-w-2xl mx-auto">
-                Due to a server error, questions were not able to be retreived.
-                Contact the server admin through OMMC Discord to resolve the
-                issue.
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  }
-
   // This following section will display the table with the questions.
   return (
     <div className="min-h-screen  overflow-hidden">
-      <head>
-        <link
-          href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
-          rel="stylesheet"
-        />
-      </head>
-      <div className="py-16  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-center">
+      <div className="py-16  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out text-center">
         <div className="max-w-3xl mx-auto mb-6">
           <div className="text-center text-3xl sm:text-5xl font-extrabold text-white dark:text-dark-high-emphasis mb-6">
             Year 1 Atlas
@@ -364,7 +271,7 @@ const RecordList = (props) => {
 
               <form className="inline">
                 <input
-                  className="block w-full pl-12 pr-3 py-3 bg-red-100 placeholder-gray-900 dark:placeholder-red-800 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition text-black dark:text-white"
+                  className="block w-full pl-12 pr-3 py-3 bg-red-100 placeholder-gray-900 dark:placeholder-red-800 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition text-gray-900 dark:text-white"
                   type="search"
                   onChange={(e) => {
                     setSearchInput(e.target.value);
@@ -416,8 +323,8 @@ const RecordList = (props) => {
           </div>
         </div>
 
-        <div className="py-0.5 px-1 lg:col-span-9 col-span-10 overflow-y-auto">
-          <div className="">{listBody()}</div>
+        <div className="py-0.5 px-1 lg:col-span-9 col-span-10 overflow-hidden">
+          <QuestionBody filterBody={filterBody} questions={questions} />
         </div>
       </div>
     </div>

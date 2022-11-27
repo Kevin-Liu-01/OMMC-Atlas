@@ -3,20 +3,17 @@ import React, { useState, useEffect } from "react";
 // We use Route in order to define the different routes of our application
 import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
-
 import Navbar from "./Components/navbar.tsx";
 import Main from "./Pages/main.tsx";
 import Edit from "./Pages/edit";
 import Create from "./Pages/create";
 import RecordList from "./Pages/recordList.tsx";
-import Login from "./Pages/login";
+import Login from "./Pages/login.tsx";
 import Signup from "./Pages/signup.tsx";
-import Profile from "./Pages/profile.js";
+import Profile from "./Pages/profile.tsx";
 import View from "./Pages/view.tsx";
 import Footer from "./Components/footer.tsx";
-
-import { SignUpContext } from "./context/signUpContext";
-import { isCompositeComponent } from "react-dom/test-utils";
+import { SignUpContext } from "./context/signUpContext.tsx";
 
 const App = () => {
   const [signInStatus, setSignInStatus] = useState(false);
