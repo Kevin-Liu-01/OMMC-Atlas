@@ -40,7 +40,7 @@ const Profile = (props) => {
   }
   if (username === "") {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-800 duration-150 overflow-hidden">
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-800 overflow-hidden">
         <div className="p-8 max-w-7xl mx-auto ">
           <div className="flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl p-8 drop-shadow-lg">
             <div>
@@ -57,7 +57,7 @@ const Profile = (props) => {
     );
   } else {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-800 duration-150 overflow-hidden">
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-800  overflow-hidden">
         <div className="p-4 md:p-8 max-w-7xl mx-auto ">
           <div className="md:flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl p-8 drop-shadow-lg">
             <div>

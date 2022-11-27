@@ -32,7 +32,7 @@ const Home = () => {
             <div className="my-auto text-center text-white">
               <div className="text-5xl md:text-7xl font-extrabold md:mt-0 mt-12 mb-10">
                 OMMC{" "}
-                <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent duration-150 ease-in-out">
+                <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent ">
                   Atlas
                 </span>
               </div>
@@ -57,7 +57,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-slate-100 dark:bg-gray-900  duration-150 ease-in-out">
+      <div className=" bg-slate-100 dark:bg-gray-900  ">
         <div className="h-12 sm:h-20 md:h-24"></div>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="pl-4 border-l-[15px] border-red-600 reveal text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100">

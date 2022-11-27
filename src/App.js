@@ -18,9 +18,16 @@ import { SignUpContext } from "./context/signUpContext.tsx";
 const App = () => {
   const [signInStatus, setSignInStatus] = useState(false);
   const [username, setUsername] = useState(getCookie("username"));
-
   const [email, setEmail] = useState(getCookie("email"));
   const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    setDark(JSON.parse(window.localStorage.getItem("mode")));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("mode", dark);
+  }, [dark]);
 
   function setCookie(cookieName) {
     const d = new Date();
