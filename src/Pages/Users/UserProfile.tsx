@@ -5,7 +5,7 @@ import {
   MailOpenIcon,
   ArrowCircleRightIcon,
 } from "@heroicons/react/outline";
-import { SignUpContext } from "../context/signUpContext.tsx";
+import { SignUpContext } from "../../context/signUpContext.tsx";
 
 const updates = [
   {

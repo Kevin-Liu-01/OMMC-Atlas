@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Constants from "../config.js";
+import Constants from "../../config.js";
 import { useParams } from "react-router-dom";
 import { ArrowCircleLeftIcon, CheckCircleIcon } from "@heroicons/react/outline";
 let Latex = require("react-latex");

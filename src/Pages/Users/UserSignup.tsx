@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import axios from "axios";
-import Constants from "../config.js";
+import Constants from "../../config.js";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -11,7 +11,7 @@ import {
   KeyIcon,
   ExclamationCircleIcon,
 } from "@heroicons/react/outline";
-import { SignUpContext } from "../context/signUpContext.tsx";
+import { SignUpContext } from "../../context/signUpContext.tsx";
 
 const schema = yup.object().shape({
   Username: yup.string().required("Username is a required field"),

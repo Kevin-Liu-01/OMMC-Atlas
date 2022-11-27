@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Constants from "../config.js";
+import Constants from "../../config.js";
 import Fuse from "fuse.js";
 import { SearchIcon } from "@heroicons/react/outline";
-import Question from "../Components/AtlasComponents/Question.tsx";
-import QuestionBody from "../Components/AtlasComponents/QuestionBody.tsx";
+import Question from "../../Components/AtlasComponents/Question.tsx";
+import QuestionBody from "../../Components/AtlasComponents/QuestionBody.tsx";
 
 const RecordList = (props) => {
   // This is the constructor that shall store our data retrieved from the database

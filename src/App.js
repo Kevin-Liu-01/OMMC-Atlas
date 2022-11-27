@@ -5,13 +5,13 @@ import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
 import Navbar from "./Components/Navbar.tsx";
 import Home from "./Pages/Home.tsx";
-import Edit from "./Pages/Edit";
-import Create from "./Pages/Create";
-import Atlas from "./Pages/Atlas.tsx";
-import Login from "./Pages/Login.tsx";
-import Signup from "./Pages/Signup.tsx";
-import Profile from "./Pages/Profile.tsx";
-import View from "./Pages/View.tsx";
+import Edit from "./Pages/Editor";
+import Create from "./Pages/Creator";
+import Atlas from "./Pages/Atlas/Atlas.tsx";
+import Login from "./Pages/Users/UserLogin.tsx";
+import Signup from "./Pages/Users/UserSignup.tsx";
+import Profile from "./Pages/Users/UserProfile.tsx";
+import View from "./Pages/Atlas/QuestionView.tsx";
 import Footer from "./Components/Footer.tsx";
 import { SignUpContext } from "./context/signUpContext.tsx";
 
