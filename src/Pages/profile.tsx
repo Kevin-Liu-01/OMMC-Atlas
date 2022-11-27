@@ -14,7 +14,7 @@ const updates = [
     content: "OMMC Atlas is available for all OMMC members to use.",
   },
   {
-    date: "11/01/2022",
+    date: "11/23/2022",
     title: "OMMC Official UI",
     content: "OMMC Official receives a new Mobile and Web UI!",
   },
