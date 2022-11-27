@@ -257,21 +257,21 @@ const RecordList = (props) => {
 
   // This following section will display the table with the questions.
   return (
-    <div className="min-h-screen  overflow-hidden">
+    <div className="min-h-screen  overflow-hidden ">
       <div className="py-16  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out text-center">
         <div className="max-w-3xl mx-auto mb-6">
           <div className="text-center text-3xl sm:text-5xl font-extrabold text-white dark:text-dark-high-emphasis mb-6">
             Year 1 Atlas
           </div>
-          <div className="border-2 border-red-300 rounded-xl overflow-hidden max-w-2xl">
+          <div className="border-2 border-red-300 rounded-xl overflow-hidden max-w-2xl mx-auto">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <SearchIcon className="h-5 w-5 text-gray-700 " />
               </div>
 
-              <form className="inline">
+              <form className="inline ">
                 <input
-                  className="block w-full pl-12 pr-3 py-3 bg-red-100 placeholder-gray-900 dark:placeholder-red-800 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition text-gray-900 dark:text-white"
+                  className="block font-semibold w-full pl-12 pr-3 py-3 bg-red-100 placeholder-gray-700 dark:placeholder-red-800 focus:outline-none transition text-gray-900 dark:text-red-800"
                   type="search"
                   onChange={(e) => {
                     setSearchInput(e.target.value);
@@ -290,7 +290,7 @@ const RecordList = (props) => {
         </div>
       </div>
       <div className="pt-3 px-4 lg:px-9 pb-4 grid grid-cols-10 bg-slate-100 dark:bg-gray-900">
-        <div className="lg:col-span-1 lg:mr-3 col-span-10 overflow-y-auto">
+        <div className="lg:col-span-1 lg:mr-3 col-span-10 overflow-y-auto scrollbar">
           <div className="text-left ml-1">
             <div className="text-gray-500 pb-1 mb-1 border-b-2 border-gray-300 dark:border-gray-500">
               Topics
@@ -323,7 +323,7 @@ const RecordList = (props) => {
           </div>
         </div>
 
-        <div className="py-0.5 px-1 lg:col-span-9 col-span-10 overflow-hidden">
+        <div className="py-0.5 px-1 lg:col-span-9 col-span-10 ">
           <QuestionBody filterBody={filterBody} questions={questions} />
         </div>
       </div>
