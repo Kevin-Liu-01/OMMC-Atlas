@@ -1,3 +1,8 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 .ProfileContainer {
   display: flex;
   min-height: 100vh;

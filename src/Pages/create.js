@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from "react";
 // This will require to npm install axios
 import axios from "axios";
-import { withRouter } from "react-router";
 import Constants from "./config.js";
 import debounce from "lodash.debounce";
 
@@ -174,4 +173,4 @@ const Create = (props) => {
   );
 };
 
-export default withRouter(Create);
+export default Create;

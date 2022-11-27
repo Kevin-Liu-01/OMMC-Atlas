@@ -1,20 +1,19 @@
+import "./App.css";
 import React, { useState, useEffect } from "react";
-
 // We use Route in order to define the different routes of our application
-import { Route } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
-import Navbar from "./components/navbar";
-import Edit from "./components/edit";
-import Create from "./components/create";
-import RecordList from "./components/recordList";
-import Login from "./components/login";
-import Signup from "./components/signup";
-import Profile from "./components/profile";
-import View from "./components/view";
-import Footer from "./components/footer";
 
-import "./styling/app.css";
+import Navbar from "./Components/navbar.tsx";
+import Main from "./Pages/main.tsx";
+import Edit from "./Pages/edit";
+import Create from "./Pages/create";
+import RecordList from "./Pages/recordList.tsx";
+import Login from "./Pages/login";
+import Signup from "./Pages/signup.tsx";
+import Profile from "./Pages/profile.js";
+import View from "./Pages/view.tsx";
+import Footer from "./Components/footer.tsx";
 
 import { SignUpContext } from "./context/signUpContext";
 import { isCompositeComponent } from "react-dom/test-utils";
@@ -24,6 +23,7 @@ const App = () => {
   const [username, setUsername] = useState(getCookie("username"));
 
   const [email, setEmail] = useState(getCookie("email"));
+  const [dark, setDark] = useState(false);
 
   function setCookie(cookieName) {
     const d = new Date();
@@ -102,46 +102,23 @@ const App = () => {
         eraseCookie,
       }}
     >
-      <head>
-        <link
-          href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
-          rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <div className="App">
-        <div style={{ backgroundColor: "#c9424b" }}>
-          <Navbar />
-          <div>
-            <Route exact path="/">
-              <RecordList />
-            </Route>
+      <div className={dark ? "dark" : ""}>
+        <Navbar dark={dark} setDark={setDark} />
+        <Routes>
+          <Route path="/" element={<Main />}></Route>
+          <Route path="/atlas" element={<RecordList />}></Route>
 
-            <Route path="/edit/:id" component={Edit} />
-            <Route path="/view/:id" component={View} />
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/view/:id" element={<View />} />
 
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/signup" element={<Signup />} />
 
-            <Route path="/create">
-              <Create />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-          </div>
-        </div>
+          <Route path="/create" element={<Create />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer dark={dark} setDark={setDark} />
       </div>
-      <Footer />
     </SignUpContext.Provider>
   );
 };

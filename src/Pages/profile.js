@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import { withRouter } from "react-router";
 import { SignUpContext } from "../context/signUpContext";
 import "../styling/profile.css";
 
@@ -57,4 +56,4 @@ const Profile = (props) => {
   }
 };
 
-export default withRouter(Profile);
+export default Profile;
