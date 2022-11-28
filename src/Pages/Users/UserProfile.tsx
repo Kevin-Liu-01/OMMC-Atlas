@@ -107,7 +107,7 @@ const Profile = (props) => {
             </div>
             <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-green-300 via-blue-300 to-purple-400 dark:from-gray-600 dark:to-gray-700 rounded-xl p-8 mt-4 drop-shadow-lg">
               {updates.map((update) => (
-                <div className="bg-gradient-to-r dark:from-green-300 dark:via-blue-300 dark:to-purple-400 p-4 rounded-xl  ">
+                <div className="bg-white dark:bg-gradient-to-r dark:from-green-300 dark:via-blue-300 dark:to-purple-400 p-4 rounded-xl  ">
                   <div className="text-base text-gray-500  mb-2">
                     {update.date}
                   </div>
