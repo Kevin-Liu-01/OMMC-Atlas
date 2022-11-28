@@ -258,7 +258,7 @@ const RecordList = (props) => {
   // This following section will display the table with the questions.
   return (
     <div className="min-h-screen  overflow-hidden ">
-      <div className="py-16  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800  text-center">
+      <div className="py-16  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out text-center">
         <div className="max-w-3xl mx-auto mb-6">
           <div className="text-center text-3xl sm:text-5xl font-extrabold text-white dark:text-dark-high-emphasis mb-6">
             Year 1 Atlas
@@ -269,22 +269,20 @@ const RecordList = (props) => {
                 <SearchIcon className="h-5 w-5 text-gray-700 " />
               </div>
 
-              <form className="inline ">
-                <input
-                  className="block font-semibold w-full pl-12 pr-3 py-3 bg-red-100 placeholder-gray-700 dark:placeholder-red-800 focus:outline-none transition text-gray-900 dark:text-red-800"
-                  type="search"
-                  onChange={(e) => {
-                    setSearchInput(e.target.value);
-                    searchData();
-                  }}
-                  onKeyDown={(e) => {
-                    setSearchInput(e.target.value);
-                    searchData();
-                  }}
-                  value={searchInput}
-                  placeholder="Search for a question"
-                />
-              </form>
+              <input
+                className="block font-semibold w-full pl-12 pr-3 py-3 bg-red-100 placeholder-gray-700 dark:placeholder-red-800 focus:outline-none transition text-gray-900 dark:text-red-800"
+                type="search"
+                onChange={(e) => {
+                  setSearchInput(e.target.value);
+                  searchData();
+                }}
+                onKeyDown={(e) => {
+                  setSearchInput(e.target.value);
+                  searchData();
+                }}
+                value={searchInput}
+                placeholder="Search for a question"
+              />
             </div>
           </div>
         </div>
