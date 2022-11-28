@@ -22,7 +22,7 @@ const Question = (props) => {
             className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
             onClick={() => setShowAnswer(false)}
           >
-            View Solution <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+            View Solution <CheckCircleIcon className="inline pb-1 h-5 w-5 " />
           </button>
         )}
         {showAnswer === false && (
@@ -43,13 +43,13 @@ const Question = (props) => {
           className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
           href={"/view/" + props.record._id}
         >
-          View Problem <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+          View Problem <ArrowsExpandIcon className="inline pb-1 h-5 w-5 " />
         </a>
       </div>
-      <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300">
+      <button className="px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md bg-yellow-300">
         {props.record.question_topic}
       </button>{" "}
-      <button className="ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-green-300">
+      <button className="ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md bg-green-300">
         {props.record.question_level}
       </button>
       {/* <a

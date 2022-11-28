@@ -17,7 +17,7 @@ const Home = () => {
     "In equilateral triangle $XYZ$ with side length $10$, define points $A, B$ on $XY,$ points $C, D$ on $YZ,$ and points $E, F$ on $ZX$ such that $ABDE$ and $ACEF$ are rectangles. The area of hexagon $ABCDEF$ can be written as $sqrt{x}$ for some positive integer $x$. Find $x$.";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-7 md:-mt-20 md:min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
+      <div className="relative -mt-7 md:-mt-20 lg:-mt-36 md:min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 md:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
@@ -25,8 +25,8 @@ const Home = () => {
             <div className="flex items-center justify-center my-auto ">
               <img
                 className="mx-auto w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
-                src="https://cdn.discordapp.com/attachments/1044744976942243880/1045404320302116874/Copy_of_tshirt_design_2.png"
-                alt="OMMC Hexagons"
+                src={require("../images/atlas-circles.png")}
+                alt="OMMC Circles"
               ></img>
             </div>
             <div className="my-auto text-center text-white">
@@ -128,9 +128,9 @@ const Home = () => {
             <div className=" md:flex-1 mt-4 md:mt-0">
               <h3 className="font-bold sm:my-0 my-6 text-3xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                 What is{" "}
-                <span className="rounded-lg px-1.5 bg-red-600 text-white select-none">
+                <div className="sm:inline inline-block rounded-lg px-1.5 bg-red-600 text-white select-none">
                   OMMC Atlas?
-                </span>
+                </div>
               </h3>
               <p className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                 <div>
@@ -160,8 +160,8 @@ const Home = () => {
                               <div className=" select-none min-w-full bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
                                 <img
                                   className="hover:scale-105 duration-150 ease-in-out"
-                                  src="https://cdn.discordapp.com/attachments/1044744976942243880/1045752873901891655/image.png"
-                                  alt="OMMC Diagram"
+                                  src={require("../images/atlas-hexagons.png")}
+                                  alt="OMMC Hexagons"
                                 />
                               </div>
                             </div>
@@ -177,7 +177,7 @@ const Home = () => {
               <div className=" md:flex-1 md:order-first md:pr-12 lg:pr-24">
                 <h3 className="sm:my-0 my-6 font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
-                  <span className="rounded-lg px-1.5 bg-orange-500 text-white select-none">
+                  <span className="sm:inline inline-block rounded-lg px-1.5 bg-orange-500 text-white select-none">
                     Questions like?
                   </span>
                 </h3>
@@ -217,7 +217,7 @@ const Home = () => {
             <div className=" md:flex-1 md:mt-0 my-10">
               <h3 className="border-l-[10px] pb-2 sm:pb-0 border-[#5865F2] pl-3 text-gray-900 text-[2rem] md:text-3xl leading-8 font-bold tracking-tight dark:text-white">
                 Join us on{" "}
-                <span className="rounded-lg px-1.5 bg-[#5865F2] text-white select-none">
+                <span className="sm:inline inline-block pb-1.5 sm:pb-0 rounded-lg px-1.5 bg-[#5865F2] text-white select-none">
                   Discord!
                 </span>
               </h3>

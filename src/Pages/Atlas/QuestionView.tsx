@@ -38,10 +38,10 @@ const View = () => {
   // These methods will update the state properties.
 
   return (
-    <div className="min-h-screen overflow-hidden bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen overflow-hidden bg-gray-100 dark:bg-gray-800">
       <div className="h-16 w-16"></div>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl drop-shadow-lg">
+        <div className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-xl drop-shadow-lg">
           <div className="flex text-blue-700 dark:text-blue-400 font-medium text-2xl mb-3">
             {question_comp}
             <a

@@ -263,7 +263,7 @@ const RecordList = (props) => {
           <div className="text-center text-3xl sm:text-5xl font-extrabold text-white dark:text-dark-high-emphasis mb-6">
             Year 1 Atlas
           </div>
-          <div className="border-2 border-red-300 rounded-xl overflow-hidden max-w-2xl mx-auto">
+          <div className="border-2 border-red-300 rounded-xl overflow-hidden max-w-2xl mx-auto bg-red-100">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <SearchIcon className="h-5 w-5 text-gray-700 " />
@@ -315,7 +315,7 @@ const RecordList = (props) => {
             <div className="text-center">
               <DifficultyDropdown />
             </div>
-            <div className="text-center">
+            <div className="text-center mt-1 md:mt-0">
               <TopicDropdown />
             </div>
           </div>
