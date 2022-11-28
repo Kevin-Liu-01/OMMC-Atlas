@@ -17,27 +17,27 @@ const Home = () => {
     "In equilateral triangle $XYZ$ with side length $10$, define points $A, B$ on $XY,$ points $C, D$ on $YZ,$ and points $E, F$ on $ZX$ such that $ABDE$ and $ACEF$ are rectangles. The area of hexagon $ABCDEF$ can be written as $sqrt{x}$ for some positive integer $x$. Find $x$.";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-20 lg:-mt-36 min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
+      <div className="relative -mt-20 min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 md:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
-          <div className="grid md:grid-cols-2 relative z-10">
-            <div className="hidden md:flex items-center justify-center my-auto ">
+          <div className="grid lg:grid-cols-2 relative z-10">
+            <div className="hidden lg:flex items-center justify-center my-auto ">
               <img
-                className="mx-auto w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
+                className="w-[70%] 2xl:w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
                 src={require("../images/atlas-circles.png")}
                 alt="OMMC Circles"
               ></img>
             </div>
-            <div className="md:hidden flex items-center justify-center my-auto ">
+            <div className="lg:hidden flex items-center justify-center my-auto ">
               <img
-                className="mx-auto w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
+                className="mx-auto  hover:scale-105 duration-150 ease-in-out transform select-none"
                 src={require("../images/atlas-centered.png")}
                 alt="OMMC Circles"
               ></img>
             </div>
             <div className="my-auto text-center text-white">
-              <div className="text-5xl md:text-7xl font-extrabold md:mt-0 mt-12 mb-10">
+              <div className="text-5xl md:text-7xl font-extrabold lg:mt-0 mt-12 mb-10">
                 OMMC{" "}
                 <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent ">
                   Atlas
@@ -184,7 +184,7 @@ const Home = () => {
               <div className=" md:flex-1 md:order-first md:pr-12 lg:pr-24">
                 <h3 className="sm:my-0 my-6 font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
-                  <span className="sm:inline inline-block rounded-lg px-1.5 bg-orange-500 text-white select-none">
+                  <span className="lg:inline inline-block rounded-lg px-1.5 bg-orange-500 text-white select-none">
                     Questions like?
                   </span>
                 </h3>
