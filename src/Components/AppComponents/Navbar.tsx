@@ -34,9 +34,12 @@ function Navbar(props) {
           <div className="text-gray-500 dark:text-white">
             {signInStatus ? (
               <div className="nav-item ">
-                <a className="nav-link md:text-lg" href="/profile">
+                <a
+                  className="nav-link text-sm sm:text-base md:text-lg"
+                  href="/profile"
+                >
                   Welcome,{" "}
-                  <span className="font-bold dark:text-red-600 text-gray-900 ">
+                  <span className="block sm:inline font-bold dark:text-red-600 text-gray-900 ">
                     {username}
                   </span>
                 </a>

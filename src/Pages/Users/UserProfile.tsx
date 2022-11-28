@@ -83,8 +83,8 @@ const Profile = (props) => {
               <StarIcon className="inline mb-1 h-6 w-6 " /> Favorited Questions
               - Under Construction
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 rounded-xl p-8 mt-4 drop-shadow-lg">
-              <div className="col-span-2 bg-white p-4 rounded-xl text-xl dark:bg-gray-800 dark:text-white">
+            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 dark:from-gray-600 dark:to-gray-700 rounded-xl p-8 mt-4 drop-shadow-lg">
+              <div className="col-span-2 bg-white p-4 rounded-xl text-xl bg-gradient-to-r dark:from-pink-300 dark:via-purple-300 dark:to-indigo-400 from-white to-white text-gray-900 dark:text-white">
                 Favorited Questions is still in development. Keep an eye out!
               </div>
               {/* {favorited.map((favorite) => (
@@ -105,18 +105,16 @@ const Profile = (props) => {
               <MailOpenIcon className="inline mb-1 h-6 w-6 " /> Updates From
               OMMC
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 rounded-xl p-8 mt-4 drop-shadow-lg">
+            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-green-300 via-blue-300 to-purple-400 dark:from-gray-600 dark:to-gray-700 rounded-xl p-8 mt-4 drop-shadow-lg">
               {updates.map((update) => (
-                <div className="bg-white p-4 rounded-xl  dark:bg-gray-800">
-                  <div className="text-base text-gray-500 dark:text-gray-200 mb-2">
+                <div className="bg-gradient-to-r dark:from-green-300 dark:via-blue-300 dark:to-purple-400 p-4 rounded-xl  ">
+                  <div className="text-base text-gray-500  mb-2">
                     {update.date}
                   </div>
-                  <div className="text-xl text-gray-900 dark:text-white font-semibold mb-2">
+                  <div className="text-xl text-gray-900 font-semibold mb-2">
                     {update.title}
                   </div>
-                  <div className="text-gray-900 dark:text-gray-100">
-                    {update.content}
-                  </div>
+                  <div className="text-gray-900 ">{update.content}</div>
                 </div>
               ))}
             </div>
