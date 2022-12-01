@@ -18,25 +18,25 @@ const Home = () => {
   return (
     <div className=" min-h-screen overflow-hidden ">
       <div className="relative -mt-20 min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out drop-shadow-md">
-        <div className="flex pt-28 sm:pt-12 md:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
+        <div className="flex pt-28 sm:pt-12 lg:pt-[4.5rem] 2xl:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
           <div className="grid lg:grid-cols-2 relative z-10">
-            <div className="hidden lg:flex items-center justify-center my-auto ">
+            <div className="hidden 2xl:flex items-center justify-center my-auto ">
               <img
                 className="w-[70%] 2xl:w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
                 src={require("../images/atlas-circles.png")}
-                alt="OMMC Circles"
+                alt="OMMC Circles Spaced"
               ></img>
             </div>
-            <div className="lg:hidden flex items-center justify-center my-auto ">
+            <div className="2xl:hidden flex items-center justify-center my-auto ">
               <img
-                className="mx-auto  hover:scale-105 duration-150 ease-in-out transform select-none"
+                className="mx-auto lg:w-[85%] xl:w-[60%] w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
                 src={require("../images/atlas-centered.png")}
                 alt="OMMC Circles"
               ></img>
             </div>
-            <div className="my-auto text-center text-white">
+            <div className="my-auto text-center text-white xl:pr-12 2xl:pr-0">
               <div className="text-5xl md:text-7xl font-extrabold lg:mt-0 mt-12 mb-10">
                 OMMC{" "}
                 <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent ">
