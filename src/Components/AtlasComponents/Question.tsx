@@ -5,6 +5,29 @@ let Latex = require("react-latex");
 
 const Question = (props) => {
   const [showAnswer, setShowAnswer] = useState(true);
+
+  function difficultyColor(level) {
+    if (level === "Elementary") {
+      return "bg-green-300 text-green-800 ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    } else if (level === "Intermediate") {
+      return "bg-orange-300 text-orange-800 ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    } else if (level === "Advanced") {
+      return "bg-red-300 text-red-800 ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    }
+  }
+
+  function topicColor(topic) {
+    if (topic === "Geometry") {
+      return "bg-blue-300 text-blue-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    } else if (topic === "Number Theory") {
+      return "bg-yellow-300 text-yellow-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    } else if (topic === "Algebra") {
+      return "bg-red-300 text-red-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    } else if (topic === "Combinatorics") {
+      return "bg-purple-300 text-purple-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+    }
+  }
+
   return (
     <div className="bg-white overflow-hidden dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
       <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
@@ -46,10 +69,10 @@ const Question = (props) => {
           View Problem <ArrowsExpandIcon className="inline pb-1 h-5 w-5 " />
         </a>
       </div>
-      <button className="px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md bg-yellow-300">
+      <button className={topicColor(props.record.question_topic)}>
         {props.record.question_topic}
       </button>{" "}
-      <button className="ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md bg-green-300">
+      <button className={difficultyColor(props.record.question_level)}>
         {props.record.question_level}
       </button>
       {/* <a

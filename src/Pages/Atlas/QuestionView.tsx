@@ -35,7 +35,27 @@ const View = () => {
       });
   }, []);
 
-  // These methods will update the state properties.
+  function difficultyColor() {
+    if (question_level === "Elementary") {
+      return "bg-green-300 text-green-800 text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md ";
+    } else if (question_level === "Intermediate") {
+      return "bg-orange-300 text-orange-800 text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md ";
+    } else if (question_level === "Advanced") {
+      return "bg-red-300 text-red-800 text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md ";
+    }
+  }
+
+  function topicColor(topic) {
+    if (topic === "Geometry") {
+      return "bg-blue-300 text-blue-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+    } else if (topic === "Number Theory") {
+      return "bg-yellow-300 text-yellow-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+    } else if (topic === "Algebra") {
+      return "bg-red-300 text-red-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+    } else if (topic === "Combinatorics") {
+      return "bg-purple-300 text-purple-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+    }
+  }
 
   return (
     <div className="min-h-screen overflow-hidden bg-gray-100 dark:bg-gray-800">
@@ -82,12 +102,10 @@ const View = () => {
               </>
             )}
           </div>
-          <button className="text-xl px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300">
+          <button className={topicColor(question_topic)}>
             {question_topic}
           </button>{" "}
-          <button className="text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-green-300">
-            {question_level}
-          </button>
+          <button className={difficultyColor()}>{question_level}</button>
           {/* <a
         href="/"
         onClick={() => {
