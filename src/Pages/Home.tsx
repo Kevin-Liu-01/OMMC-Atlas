@@ -39,7 +39,7 @@ const Home = () => {
             <div className="my-auto text-center text-white xl:pr-12 2xl:pr-0">
               <div className="text-5xl md:text-7xl font-extrabold lg:mt-0 mt-12 mb-10">
                 OMMC{" "}
-                <span className=" bg-clip-text dark:from-red-300 dark:to-red-400 bg-gradient-to-r text-white dark:text-transparent ">
+                <span className=" bg-clip-text dark:from-red-400 dark:to-red-500 bg-gradient-to-r text-white dark:text-transparent ">
                   Atlas
                 </span>
               </div>
