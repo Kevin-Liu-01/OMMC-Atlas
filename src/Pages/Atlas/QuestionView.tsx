@@ -36,25 +36,35 @@ const View = () => {
   }, []);
 
   function difficultyColor() {
+    let difficultyString = "";
     if (question_level === "Elementary") {
-      return "bg-green-300 text-green-800 text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md ";
+      difficultyString = "bg-green-300 text-green-800";
     } else if (question_level === "Intermediate") {
-      return "bg-orange-300 text-orange-800 text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md ";
+      difficultyString = "bg-orange-300 text-orange-800";
     } else if (question_level === "Advanced") {
-      return "bg-red-300 text-red-800 text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md ";
+      difficultyString = "bg-red-300 text-red-800";
     }
+    return (
+      difficultyString +
+      " text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-sm inline-block"
+    );
   }
 
   function topicColor(topic) {
+    let topicString = "";
     if (topic === "Geometry") {
-      return "bg-blue-300 text-blue-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+      topicString = "bg-blue-300 text-blue-800";
     } else if (topic === "Number Theory") {
-      return "bg-yellow-300 text-yellow-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+      topicString = "bg-yellow-300 text-yellow-800";
     } else if (topic === "Algebra") {
-      return "bg-red-300 text-red-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+      topicString = "bg-red-300 text-red-800";
     } else if (topic === "Combinatorics") {
-      return "bg-purple-300 text-purple-800 text-xl px-2 py-1 font-semibold rounded-lg shadow-md";
+      topicString = "bg-purple-300 text-purple-800";
     }
+    return (
+      topicString +
+      " text-xl px-2 py-1 font-semibold rounded-lg shadow-sm inline-block"
+    );
   }
 
   return (
@@ -102,10 +112,8 @@ const View = () => {
               </>
             )}
           </div>
-          <button className={topicColor(question_topic)}>
-            {question_topic}
-          </button>{" "}
-          <button className={difficultyColor()}>{question_level}</button>
+          <div className={topicColor(question_topic)}>{question_topic}</div>{" "}
+          <div className={difficultyColor()}>{question_level}</div>
           {/* <a
         href="/"
         onClick={() => {

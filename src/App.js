@@ -21,14 +21,17 @@ const App = () => {
   const [email, setEmail] = useState(getCookie("email"));
   const [dark, setDark] = useState(false);
 
+  //Extract dark mode state from local storage
   useEffect(() => {
     setDark(JSON.parse(window.localStorage.getItem("mode")));
   }, []);
 
+  //Set dark mode state in local storage
   useEffect(() => {
     window.localStorage.setItem("mode", dark);
   }, [dark]);
 
+  //Cookies
   function setCookie(cookieName) {
     const d = new Date();
 
@@ -37,7 +40,7 @@ const App = () => {
     document.cookie = cookieName;
   }
   function getCookie(cookieName) {
-    console.log("All Cookies : " + document.cookie);
+    // console.log("All Cookies: " + document.cookie);
     try {
       // Get all the cookies pairs in an array
       if (cookieName === "username") {
@@ -46,9 +49,8 @@ const App = () => {
         let cookiearray = allccookies
           .split("; ")
           .find((row) => row.startsWith("username"));
-        console.log(cookiearray);
         let value = cookiearray.split("=")[1];
-        console.log("Username value is " + value);
+        // console.log("Username value:" + value);
         return value;
       }
     } catch (error) {
@@ -61,9 +63,8 @@ const App = () => {
         let cookiearray = allcookies
           .split("; ")
           .find((row) => row.startsWith("email"));
-        console.log(cookiearray);
         let value = cookiearray.split("=")[1];
-        console.log("email value is " + value);
+        // console.log("Email value:" + value);
         return value;
       }
     } catch (error) {

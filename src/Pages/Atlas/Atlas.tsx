@@ -182,7 +182,7 @@ const RecordList = (props) => {
   function DifficultyDropdown() {
     return (
       <select
-        className="w-[100%] text-gray-500 md:mb-1 dark:bg-gray-200 rounded-md border-2 border-gray-400 shadow-sm overflow-hidden focus:border-red-700 sm:text-sm duration-150 ease-in-out"
+        className="w-[100%] text-gray-500 dark:text-gray-300 md:mb-1 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600  shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-500 focus:ring-2"
         value={difficultyFilter}
         onChange={onDropSubmit}
       >
@@ -197,7 +197,7 @@ const RecordList = (props) => {
   function TopicDropdown() {
     return (
       <select
-        className="w-[100%] text-gray-500  rounded-md border-2 border-gray-400 shadow-sm overflow-hidden focus:clear-none focus:border-red-700 sm:text-sm duration-150 ease-in-out"
+        className="w-[100%] text-gray-500 dark:text-gray-300 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-500 focus:ring-2"
         value={topicFilter}
         onChange={onTopicDropSubmit}
       >
@@ -312,11 +312,14 @@ const RecordList = (props) => {
             <div className="text-gray-500 pb-1 mb-1 border-b-2 border-gray-300 dark:border-gray-500">
               Filters
             </div>
-            <div className="text-center">
-              <DifficultyDropdown />
-            </div>
-            <div className="text-center mt-1 md:mt-0">
-              <TopicDropdown />
+
+            <div className="mr-1">
+              <div className="text-center">
+                <DifficultyDropdown />
+              </div>
+              <div className="text-center mt-1 md:mt-0">
+                <TopicDropdown />
+              </div>
             </div>
           </div>
         </div>

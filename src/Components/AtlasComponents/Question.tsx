@@ -7,25 +7,35 @@ const Question = (props) => {
   const [showAnswer, setShowAnswer] = useState(true);
 
   function difficultyColor(level) {
+    let difficultyString = "";
     if (level === "Elementary") {
-      return "bg-green-300 text-green-800 ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      difficultyString = "bg-green-300 text-green-800";
     } else if (level === "Intermediate") {
-      return "bg-orange-300 text-orange-800 ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      difficultyString = "bg-orange-300 text-orange-800";
     } else if (level === "Advanced") {
-      return "bg-red-300 text-red-800 ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      difficultyString = "bg-red-300 text-red-800";
     }
+    return (
+      difficultyString +
+      " ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-sm inline-block"
+    );
   }
 
   function topicColor(topic) {
+    let topicString = "";
     if (topic === "Geometry") {
-      return "bg-blue-300 text-blue-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      topicString = "bg-blue-300 text-blue-800";
     } else if (topic === "Number Theory") {
-      return "bg-yellow-300 text-yellow-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      topicString = "bg-yellow-300 text-yellow-800";
     } else if (topic === "Algebra") {
-      return "bg-red-300 text-red-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      topicString = "bg-red-300 text-red-800";
     } else if (topic === "Combinatorics") {
-      return "bg-purple-300 text-purple-800 px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-md";
+      topicString = "bg-purple-300 text-purple-800";
     }
+    return (
+      topicString +
+      " px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-sm inline-block"
+    );
   }
 
   return (
@@ -42,7 +52,7 @@ const Question = (props) => {
       <div className="mb-3">
         {showAnswer === true && (
           <button
-            className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
+            className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-sm hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out"
             onClick={() => setShowAnswer(false)}
           >
             View Solution <CheckCircleIcon className="inline pb-1 h-5 w-5 " />
@@ -63,18 +73,18 @@ const Question = (props) => {
       </div>
       <div className="mb-[0.625rem]">
         <a
-          className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
+          className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-sm hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out"
           href={"/view/" + props.record._id}
         >
           View Problem <ArrowsExpandIcon className="inline pb-1 h-5 w-5 " />
         </a>
       </div>
-      <button className={topicColor(props.record.question_topic)}>
+      <div className={topicColor(props.record.question_topic)}>
         {props.record.question_topic}
-      </button>{" "}
-      <button className={difficultyColor(props.record.question_level)}>
+      </div>{" "}
+      <div className={difficultyColor(props.record.question_level)}>
         {props.record.question_level}
-      </button>
+      </div>
       {/* <a
           href="/"
           onClick={() => {

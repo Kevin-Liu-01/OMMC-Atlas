@@ -121,7 +121,7 @@ function Login(props) {
           <h3 className="font-extrabold text-4xl">Log In</h3>
           <div className="text-center">
             <form
-              className="grid grid-rows-4 mt-8 gap-2"
+              className="flex flex-col flex-1 mt-8 gap-2"
               onSubmit={handleSubmit(submitForm)}
             >
               {" "}
@@ -162,7 +162,9 @@ function Login(props) {
                     {...register("Password")}
                   />{" "}
                 </div>{" "}
-                <p className="text-red-700"> {errors.Password?.message} </p>
+                <p className="text-red-700 md:px-0 px-[0.1rem]">
+                  {errors.Password?.message}{" "}
+                </p>
               </div>
               <div className="bg-gray-100 py-2 rounded-lg">
                 <div className="flex justify-center">
@@ -185,7 +187,7 @@ function Login(props) {
                 )}
               </div>
               <button
-                className="font-semibold mt-2 py-2 px-3 max-w-xl mx-auto bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-md"
+                className="font-semibold mt-2 py-2 px-3 max-w-xl mx-auto bg-gray-200 duration-150 ease-in-out hover:bg-gradient-to-r hover:from-indigo-200 hover:via-red-200 hover:to-yellow-100 rounded-md"
                 type="submit"
                 id="submit"
               >

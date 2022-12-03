@@ -39,7 +39,7 @@ const Home = () => {
             <div className="my-auto text-center text-white xl:pr-12 2xl:pr-0">
               <div className="text-5xl md:text-7xl font-extrabold lg:mt-0 mt-12 mb-10">
                 OMMC{" "}
-                <span className=" bg-clip-text dark:from-rose-300 dark:to-rose-400 bg-gradient-to-r text-white dark:text-transparent ">
+                <span className=" bg-clip-text dark:from-red-300 dark:to-red-400 bg-gradient-to-r text-white dark:text-transparent ">
                   Atlas
                 </span>
               </div>
@@ -139,7 +139,7 @@ const Home = () => {
                   OMMC Atlas?
                 </div>
               </h3>
-              <p className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
+              <div className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                 <div>
                   <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-red-500 to-red-700">
                     <DatabaseIcon className="w-6 h-6" />
@@ -150,7 +150,7 @@ const Home = () => {
                   contains a variety of former problems used on OMMC contests,
                   and is organized based on difficulty and topic.
                 </div>
-              </p>
+              </div>
             </div>
           </div>
           <div className="h-20 2xl:h-28"></div>
@@ -188,7 +188,7 @@ const Home = () => {
                     Questions like?
                   </span>
                 </h3>
-                <p className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
+                <div className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                   <div>
                     <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-orange-500 to-orange-600">
                       <VariableIcon className="w-6 h-6" />
@@ -200,7 +200,7 @@ const Home = () => {
                     AMC 10/12 problem. However, they are still accessible to
                     students who are familiar with the AMC 10/12 format.
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ const Home = () => {
                     title="DiscordLink"
                     src="https://discord.com/widget?id=796756256022200350&theme=dark"
                     className="drop-shadow-lg w-full h-[22rem] md:h-[30rem] rounded-xl select-none"
-                    allowTransparency={true}
+                    allowtransparency={"true"}
                     frameBorder="0"
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                   ></iframe>
