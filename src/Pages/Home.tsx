@@ -37,21 +37,18 @@ const Home = () => {
               ></img>
             </div>
             <div className="my-auto text-center text-white xl:pr-12 2xl:pr-0">
-              <div className="text-5xl md:text-7xl font-extrabold lg:mt-0 mt-12 mb-10">
-                OMMC{" "}
-                <span className=" bg-clip-text dark:from-red-400 dark:to-red-500 bg-gradient-to-r text-white dark:text-transparent ">
-                  Atlas
-                </span>
+              <div className="text-5xl md:text-7xl  font-extrabold lg:mt-0 mt-12 mb-10">
+                OMMC Atlas
               </div>
-              <div className="text-xl text-gray-100 md:text-3xl font-[600] my-4 sm:my-10">
+              <div className="text-xl text-gray-100 md:text-3xl font-[550] my-4 sm:my-10">
                 An online database of{" "}
-                <span className="decoration-clone bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 text-transparent bg-clip-text">
+                <span className="decoration-clone bg-gradient-to-r from-indigo-200 dark:from-red-300 via-red-200 dark:via-red-400 to-yellow-100 dark:to-red-400 text-transparent bg-clip-text font-bold">
                   free, high-quality resources
                 </span>{" "}
                 to help you succeed in OMMC.
               </div>
               <a href="/atlas">
-                <button className="mt-2 bg-orange-100 hover:bg-orange-200 text-gray-900 hover:text-orange-800 hover:scale-105 duration-150 ease-in-out shadow-orange-200/50 shadow-lg font-semibold text-xl rounded-md p-2 px-4">
+                <button className="mt-2 bg-orange-100 dark:bg-red-500 hover:bg-orange-200 dark:hover:bg-red-400 text-gray-900 dark:text-gray-100 hover:text-orange-800 dark:hover:text-red-800 hover:scale-105 duration-150 ease-in-out shadow-orange-300/50 dark:shadow-red-600/50 shadow-md font-semibold text-xl rounded-xl p-2 px-4">
                   View the Atlas{" "}
                   <ArrowCircleRightIcon className="inline mb-1 h-5 w-5 " />
                 </button>
@@ -59,7 +56,7 @@ const Home = () => {
             </div>
           </div>
           <div className="h-16 sm:h-24 w-16"></div>
-          <div className="text-center pb-4 text-xl justify-end text-gray-100 font-semibold">
+          <div className="text-center pb-4 text-xl justify-end text-gray-100  font-semibold">
             Created by Kevin Liu for OMMC
           </div>
         </div>

@@ -24,7 +24,7 @@ function Navbar(props) {
                 <span className="text-2xl font-extrabold text-gray-800 dark:text-white dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-600 ">
                   <span className="hidden sm:inline">OMMC </span>Atlas
                 </span>
-                <div className="font-mono text-[0.6rem] dark:text-gray-200 text-gray-500 border text-center border-gray-500 dark:border-gray-700 rounded-full bg-white dark:bg-gray-800 block px-1">
+                <div className="font-mono text-[0.6rem] dark:text-gray-200 text-gray-500 border text-center border-gray-500 dark:border-gray-600 rounded-full bg-white bg-gradient-to-r dark:from-gray-700 dark:to-gray-800 block px-1">
                   Version 2.0
                 </div>
               </div>
