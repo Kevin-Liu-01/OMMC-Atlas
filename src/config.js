@@ -1,5 +1,5 @@
 const Constants = {
-  SERVER_HOST: "https://ommc-atlas-server-updated.herokuapp.com",
+  SERVER_HOST: "https://atlas-server.vercel.app",
 };
 
 export default Constants;

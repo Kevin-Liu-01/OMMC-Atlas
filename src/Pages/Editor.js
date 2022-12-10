@@ -14,13 +14,13 @@ const Edit = (props) => {
 
   // This will get the record based on the id from the database.
   useEffect(() => {
-    console.log("USEFFECT CALLED");
+    console.log("USEEFFECT CALLED");
     axios
-      .get(`${Constants.SERVER_HOST}/record/${props.match.params.id}`)
+      .get(`${Constants.SERVER_HOST}/question/${props.match.params.id}`)
       .then(
         (response) => (
           console.log(
-            `${Constants.SERVER_HOST}/record/${props.match.params.id}`
+            `${Constants.SERVER_HOST}/question/${props.match.params.id}`
           ),
           setName(response.data.question_name),
           setPosition(response.data.question_position),

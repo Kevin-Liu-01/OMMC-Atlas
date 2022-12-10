@@ -56,9 +56,11 @@ const Create = (props) => {
       question_comp: stateObj.question_comp,
     };
 
-    axios.post(`${Constants.SERVER_HOST}/record/add`, newperson).then((res) => {
-      console.log(res.data);
-    });
+    axios
+      .post(`${Constants.SERVER_HOST}/question/add`, newperson)
+      .then((res) => {
+        console.log(res.data);
+      });
 
     console.log("Timer begin");
 

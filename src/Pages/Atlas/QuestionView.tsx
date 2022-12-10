@@ -19,10 +19,10 @@ const View = () => {
   useEffect(() => {
     console.log("View Called");
     axios
-      .get(`${Constants.SERVER_HOST}/record/${id}`)
+      .get(`${Constants.SERVER_HOST}/question/${id}`)
       .then(
         (response) => (
-          console.log(`${Constants.SERVER_HOST}/record/${id}`),
+          console.log(`${Constants.SERVER_HOST}/question/${id}`),
           setName(response.data.question_name),
           setPosition(response.data.question_position),
           setLevel(response.data.question_level),

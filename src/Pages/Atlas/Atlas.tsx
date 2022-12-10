@@ -21,10 +21,10 @@ const RecordList = (props) => {
   // This method will get the data from the database.
   useEffect(() => {
     axios
-      .get(`${Constants.SERVER_HOST}/record/`)
+      .get(`${Constants.SERVER_HOST}/question/`)
       .then((response) => {
         console.log(
-          `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
+          `/question/ returned response from: ${Constants.SERVER_HOST}/question/`
         );
         setQuestions(response.data);
         setGeo(0);
