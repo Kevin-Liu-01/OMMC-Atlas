@@ -4,14 +4,18 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
 import Navbar from "./Components/AppComponents/Navbar.tsx";
+
 import Home from "./Pages/Home.tsx";
 import Edit from "./Pages/Editor";
 import Create from "./Pages/Creator";
 import Atlas from "./Pages/Atlas/Atlas.tsx";
+import Error from "./Pages/Error.tsx";
+
 import Login from "./Pages/Users/UserLogin.tsx";
 import Signup from "./Pages/Users/UserSignup.tsx";
 import Profile from "./Pages/Users/UserProfile.tsx";
 import View from "./Pages/Atlas/QuestionView.tsx";
+
 import Footer from "./Components/AppComponents/Footer.tsx";
 import { SignUpContext } from "./context/signUpContext.tsx";
 
@@ -139,6 +143,8 @@ const App = () => {
 
           <Route path="/create" element={<Create />} />
           <Route path="/login" element={<Login />} />
+
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer dark={dark} setDark={setDark} />
       </div>
