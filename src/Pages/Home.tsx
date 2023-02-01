@@ -42,10 +42,10 @@ const Home = () => {
               </div>
               <div className="text-xl text-gray-100 md:text-3xl font-[550] my-4 sm:my-10">
                 An online database of{" "}
-                <span className="decoration-clone bg-gradient-to-r from-indigo-200 dark:from-red-300 via-red-200 dark:via-red-400 to-yellow-100 dark:to-red-400 text-transparent bg-clip-text font-bold">
-                  free, high-quality resources
+                <span className="decoration-clone bg-gradient-to-r from-indigo-200 dark:from-orange-300 via-pink-200 dark:via-red-300 to-yellow-100 dark:to-pink-400 text-transparent bg-clip-text font-bold">
+                  free, high-quality
                 </span>{" "}
-                to help you succeed in OMMC.
+                resources to help you succeed in OMMC.
               </div>
               <a href="/atlas">
                 <button className="mt-2 bg-orange-100 dark:bg-red-500 hover:bg-orange-200 dark:hover:bg-red-400 text-gray-900 dark:text-gray-100 hover:text-orange-800 dark:hover:text-red-800 hover:scale-105 duration-150 ease-in-out shadow-orange-300/50 dark:shadow-red-600/50 shadow-md font-semibold text-xl rounded-xl p-2 px-4">
@@ -64,7 +64,7 @@ const Home = () => {
       <div className=" bg-slate-100 dark:bg-gray-900  ">
         <div className="h-12 sm:h-20 md:h-24"></div>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="pl-4 border-l-[15px] border-red-600 reveal text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100">
+          <h2 className="pl-4 border-l-[15px] border-red-700 reveal text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100">
             <div className="dark:hidden">
               More about <span className="text-red-600">OMMC</span>
             </div>
@@ -76,7 +76,7 @@ const Home = () => {
           <p className="reveal text-lg md:text-xl 2xl:text-2xl font-medium max-w-4xl leading-relaxed text-gray-700 dark:text-gray-400">
             OMMC is a community of students who are passionate about math. This
             database seeks to collect and organize resources that will help you
-            <span className="text-gray-900 font-bold dark:text-white">
+            <span className="text-gray-900 font-bold dark:text-gray-200">
               {" "}
               solve problems
             </span>{" "}
@@ -91,12 +91,12 @@ const Home = () => {
                     <div className="flex flex-col mb-4">
                       <div className="overflow-x-auto -mx-4 px-4 -my-2 py-2">
                         <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-lg border-b dark:border-l border-gray-200 dark:border-black">
-                          <div className="min-w-full select-none bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
+                          <div className="min-w-full select-none bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-2xl">
                             <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
                               {" "}
                               Year 1
                             </div>
-                            <div className="bg-gray-100 dark:bg-gray-300  rounded-lg overflow-hidden mb-3">
+                            <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
                               <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
                                 <Latex>{equation}</Latex>
                               </p>
@@ -132,7 +132,7 @@ const Home = () => {
             <div className=" md:flex-1 mt-4 md:mt-0">
               <h3 className="font-bold sm:my-0 my-6 text-3xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                 What is{" "}
-                <div className="sm:inline inline-block rounded-lg px-1.5 bg-red-700 text-white select-none">
+                <div className="sm:inline inline-block rounded-lg px-1.5 bg-gradient-to-r from-red-600 to-red-700 text-white select-none">
                   OMMC Atlas?
                 </div>
               </h3>
@@ -160,7 +160,7 @@ const Home = () => {
                       <div className="-mx-4 sm:-mx-6 md:mx-0">
                         <div className="flex flex-col mb-4">
                           <div className="ml-4 md:ml-0 overflow-x-auto md:-mx-4 md:px-4 -my-2 py-2">
-                            <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-lg border-b dark:border-l border-gray-200 dark:border-black">
+                            <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-2xl border-b dark:border-l border-gray-200 dark:border-black">
                               <div className=" select-none min-w-full bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
                                 <img
                                   className="hover:scale-105 duration-150 ease-in-out"
@@ -181,9 +181,10 @@ const Home = () => {
               <div className=" md:flex-1 md:order-first md:pr-12 lg:pr-24">
                 <h3 className="sm:my-0 my-6 font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
-                  <span className="lg:inline inline-block rounded-lg px-1.5 bg-red-700 text-white select-none">
-                    Questions like?
-                  </span>
+                  <span className="lg:inline inline-block rounded-lg px-1.5 bg-gradient-to-r from-red-600 to-red-700 text-white select-none">
+                    Questions
+                  </span>{" "}
+                  like?
                 </h3>
                 <div className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                   <div>

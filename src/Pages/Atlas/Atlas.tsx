@@ -191,7 +191,7 @@ const RecordList = (props) => {
   function DifficultyDropdown() {
     return (
       <select
-        className="w-[100%] text-gray-500 dark:text-gray-300 md:mb-1 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600  shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-700 focus:ring-1"
+        className="w-[100%] text-gray-500 dark:text-gray-300 md:mb-1 py-[0.1rem] rounded-md bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600  shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-700 focus:ring-1"
         value={difficultyFilter}
         onChange={onDropSubmit}
       >
@@ -206,7 +206,7 @@ const RecordList = (props) => {
   function TopicDropdown() {
     return (
       <select
-        className="w-[100%] text-gray-500 dark:text-gray-300 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-700 focus:ring-1"
+        className="w-[100%] text-gray-500 dark:text-gray-300 py-[0.1rem] rounded-md bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-700 focus:ring-1"
         value={topicFilter}
         onChange={onTopicDropSubmit}
       >
