@@ -84,7 +84,7 @@ const View = () => {
               </button>
             </a>
           </div>
-          <div className="bg-gray-100 dark:bg-gray-300  rounded-lg overflow-hidden mb-3">
+          <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
             <p className=" p-2 min-h-[15rem] max-h-[15rem] overflow-auto text-lg md:text-xl leading-6">
               <Latex>{question_name}</Latex>
             </p>
@@ -104,7 +104,7 @@ const View = () => {
                 <div className="text-blue-700 dark:text-blue-400 font-medium text-2xl mb-1">
                   Solution
                 </div>
-                <div className="bg-gray-100 dark:bg-gray-300 rounded-lg overflow-hidden">
+                <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-gray-300 rounded-lg overflow-hidden">
                   <div className=" p-2 h-[15rem] overflow-auto text-lg md:text-xl">
                     <Latex>{question_position}</Latex>
                   </div>

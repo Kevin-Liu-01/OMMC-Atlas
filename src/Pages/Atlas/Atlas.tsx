@@ -9,6 +9,7 @@ import QuestionBody from "../../Components/AtlasComponents/QuestionBody.tsx";
 const RecordList = (props) => {
   // This is the constructor that shall store our data retrieved from the database
   const [questions, setQuestions] = useState([]);
+  const [origQuestions, setOrigQuestions] = useState([]);
   const [difficultyFilter, setDifficultyFilter] = useState("");
   const [topicFilter, setTopicFilter] = useState("");
   const [searchInput, setSearchInput] = useState("");
@@ -27,6 +28,7 @@ const RecordList = (props) => {
           `/question/ returned response from: ${Constants.SERVER_HOST}/question/`
         );
         setQuestions(response.data);
+        setOrigQuestions(response.data);
         setGeo(0);
         setComb(0);
         setNum(0);
@@ -40,6 +42,13 @@ const RecordList = (props) => {
         console.log(error);
       });
   }, []);
+
+  //If search string is empty, reset questions
+  useEffect(() => {
+    if (searchInput === "") {
+      setQuestions(origQuestions);
+    }
+  }, [searchInput]);
 
   // This method will delete a record based on the method
   async function deleteRecord(id) {
@@ -182,7 +191,7 @@ const RecordList = (props) => {
   function DifficultyDropdown() {
     return (
       <select
-        className="w-[100%] text-gray-500 dark:text-gray-300 md:mb-1 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600  shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-500 focus:ring-2"
+        className="w-[100%] text-gray-500 dark:text-gray-300 md:mb-1 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600  shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-700 focus:ring-1"
         value={difficultyFilter}
         onChange={onDropSubmit}
       >
@@ -197,7 +206,7 @@ const RecordList = (props) => {
   function TopicDropdown() {
     return (
       <select
-        className="w-[100%] text-gray-500 dark:text-gray-300 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-500 focus:ring-2"
+        className="w-[100%] text-gray-500 dark:text-gray-300 py-[0.1rem] rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 shadow-sm sm:text-sm duration-150 ease-in-out focus:outline-none focus:ring-red-300 dark:focus:ring-red-700 focus:ring-1"
         value={topicFilter}
         onChange={onTopicDropSubmit}
       >
@@ -258,7 +267,7 @@ const RecordList = (props) => {
   // This following section will display the table with the questions.
   return (
     <div className="min-h-screen  overflow-hidden ">
-      <div className="py-16  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out text-center">
+      <div className="py-8  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out text-center">
         <div className="max-w-3xl mx-auto mb-6">
           <div className="text-center text-3xl sm:text-5xl font-extrabold text-white dark:text-dark-high-emphasis mb-6">
             Year 1 Atlas

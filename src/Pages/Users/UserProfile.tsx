@@ -59,7 +59,7 @@ const Profile = (props) => {
     return (
       <div className="min-h-screen bg-gray-100 dark:bg-gray-800  overflow-hidden">
         <div className="p-4 md:p-8 max-w-7xl mx-auto ">
-          <div className="md:flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl p-8 drop-shadow-lg">
+          <div className="md:flex bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-2xl p-8 drop-shadow-lg">
             <div>
               <div className="font-semibold text-3xl text-white">
                 Welcome back, {username}
@@ -83,7 +83,7 @@ const Profile = (props) => {
               <StarIcon className="inline mb-1 h-6 w-6 " /> Favorited Questions
               - Under Construction
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 dark:from-gray-600 dark:to-gray-700 rounded-xl p-8 mt-4 drop-shadow-lg">
+            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 dark:from-gray-600 dark:to-gray-700 rounded-2xl p-8 mt-4 drop-shadow-lg">
               <div className="col-span-2 bg-white p-4 rounded-xl text-xl bg-gradient-to-r dark:from-pink-300 dark:via-purple-300 dark:to-indigo-400 from-white to-white text-gray-900 dark:text-white">
                 Favorited Questions is still in development. Keep an eye out!
               </div>
@@ -105,7 +105,7 @@ const Profile = (props) => {
               <MailOpenIcon className="inline mb-1 h-6 w-6 " /> Updates From
               OMMC
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-green-300 via-blue-300 to-purple-400 dark:from-gray-600 dark:to-gray-700 rounded-xl p-8 mt-4 drop-shadow-lg">
+            <div className="grid sm:grid-cols-2 gap-4 bg-gradient-to-r from-green-300 via-blue-300 to-purple-400 dark:from-gray-600 dark:to-gray-700 rounded-2xl p-8 mt-4 drop-shadow-lg">
               {updates.map((update) => (
                 <div className="bg-white dark:bg-gradient-to-r dark:from-green-300 dark:via-blue-300 dark:to-purple-400 p-4 rounded-xl  ">
                   <div className="text-base text-gray-500  mb-2">

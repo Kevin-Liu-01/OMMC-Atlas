@@ -132,13 +132,13 @@ const Home = () => {
             <div className=" md:flex-1 mt-4 md:mt-0">
               <h3 className="font-bold sm:my-0 my-6 text-3xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                 What is{" "}
-                <div className="sm:inline inline-block rounded-lg px-1.5 bg-red-600 text-white select-none">
+                <div className="sm:inline inline-block rounded-lg px-1.5 bg-red-700 text-white select-none">
                   OMMC Atlas?
                 </div>
               </h3>
               <div className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                 <div>
-                  <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-red-500 to-red-700">
+                  <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-red-600 to-red-800">
                     <DatabaseIcon className="w-6 h-6" />
                   </div>
                 </div>{" "}
@@ -181,13 +181,13 @@ const Home = () => {
               <div className=" md:flex-1 md:order-first md:pr-12 lg:pr-24">
                 <h3 className="sm:my-0 my-6 font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
-                  <span className="lg:inline inline-block rounded-lg px-1.5 bg-orange-500 text-white select-none">
+                  <span className="lg:inline inline-block rounded-lg px-1.5 bg-red-700 text-white select-none">
                     Questions like?
                   </span>
                 </h3>
                 <div className="flex md:text-lg mt-2 md:mt-4 text-gray-600 dark:text-gray-300">
                   <div>
-                    <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-orange-500 to-orange-600">
+                    <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-red-600 to-red-800">
                       <VariableIcon className="w-6 h-6" />
                     </div>
                   </div>{" "}

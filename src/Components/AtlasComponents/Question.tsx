@@ -44,7 +44,7 @@ const Question = (props) => {
         {" "}
         {props.record.question_comp}
       </div>
-      <div className="bg-gray-100 dark:bg-gray-300  rounded-lg overflow-hidden mb-3">
+      <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-gray-300  rounded-lg overflow-hidden mb-3 ">
         <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
           <Latex>{props.record.question_name}</Latex>
         </p>
@@ -63,7 +63,7 @@ const Question = (props) => {
             <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-1">
               Solution
             </div>
-            <div className="bg-gray-100 dark:bg-gray-300 rounded-lg overflow-hidden">
+            <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-gray-300 rounded-lg overflow-hidden">
               <div className="relative p-2 h-[7rem] overflow-auto scrollbar text-xs md:text-base">
                 <Latex>{props.record.question_position}</Latex>
               </div>
