@@ -6,7 +6,7 @@ const QuestionBody = (props) => {
       <div className="overflow-y-scroll scrollbar scroll-smooth min-h-screen max-h-[35rem] md:max-h-[70.85rem] ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-2 gap-2  ">
           {props.questions.length === 0 ? (
-            <div className="col-span-3 h-[100%] bg-gray-100 dark:bg-gray-800 text-center text-red-600 pt-20 md:pt-30 px-8">
+            <div className="col-span-3 h-[100%]  text-center text-red-600 pt-20 md:pt-30 px-8">
               <div className="text-4xl md:text-5xl font-extrabold py-4">
                 Error Code 01
               </div>

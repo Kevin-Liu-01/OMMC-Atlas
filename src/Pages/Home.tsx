@@ -42,7 +42,7 @@ const Home = () => {
               </div>
               <div className="text-xl text-gray-100 md:text-3xl font-[550] my-4 sm:my-10">
                 An online database of{" "}
-                <span className="decoration-clone bg-gradient-to-r from-indigo-200 dark:from-orange-300 via-pink-200 dark:via-red-300 to-yellow-100 dark:to-pink-400 text-transparent bg-clip-text font-bold">
+                <span className="decoration-clone bg-gradient-to-r from-indigo-200 dark:from-red-300 via-pink-200 dark:via-red-300 to-yellow-100 dark:to-red-400 text-transparent bg-clip-text font-bold">
                   free, high-quality
                 </span>{" "}
                 resources to help you succeed in OMMC.
@@ -56,7 +56,7 @@ const Home = () => {
             </div>
           </div>
           <div className="h-16 sm:h-24 w-16"></div>
-          <div className="text-center pb-4 text-xl justify-end text-gray-100  font-semibold">
+          <div className="text-center pb-4 text-sm md:text-xl justify-end text-gray-100  font-semibold">
             Created by Kevin Liu for OMMC
           </div>
         </div>
@@ -90,13 +90,13 @@ const Home = () => {
                   <div className="min-w-[52rem] px-4">
                     <div className="flex flex-col mb-4">
                       <div className="overflow-x-auto -mx-4 px-4 -my-2 py-2">
-                        <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-lg border-b dark:border-l border-gray-200 dark:border-black">
-                          <div className="min-w-full select-none bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-2xl">
+                        <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-lg">
+                          <div className="min-w-full select-none bg-white dark:bg-gray-800 shadow p-4 sm:p-6 rounded-2xl">
                             <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
                               {" "}
                               Year 1
                             </div>
-                            <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
+                            <div className="shadow-inner bg-gray-100 dark:bg-gray-700 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
                               <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
                                 <Latex>{equation}</Latex>
                               </p>
@@ -126,7 +126,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>{" "}
-              <div className="absolute top-0 bottom-0 w-36 bg-gradient-to-l from-slate-100 dark:from-gray-900 z-20 right-0 md:right-12 lg:right-24"></div>
+              <div className="absolute top-0 bottom-0 dark:w-56 w-36 bg-gradient-to-l from-slate-100 dark:from-gray-900 z-20 right-0 md:right-12 lg:right-24"></div>
               <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-red-200 dark:bg-red-800 hidden xl:block"></div>
             </div>
             <div className=" md:flex-1 mt-4 md:mt-0">
@@ -160,8 +160,8 @@ const Home = () => {
                       <div className="-mx-4 sm:-mx-6 md:mx-0">
                         <div className="flex flex-col mb-4">
                           <div className="ml-4 md:ml-0 overflow-x-auto md:-mx-4 md:px-4 -my-2 py-2">
-                            <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-2xl border-b dark:border-l border-gray-200 dark:border-black">
-                              <div className=" select-none min-w-full bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6 rounded-lg">
+                            <div className="align-middle inline-block min-w-full shadow overflow-hidden rounded-2xl  ">
+                              <div className=" select-none min-w-full bg-cover dark:bg-[url('https://wallpaperaccess.com/full/2578756.jpg')] bg-[url('https://img.freepik.com/free-photo/ripped-piece-white-paper_1194-7546.jpg?w=2000')] bg-white dark:bg-gray-700 shadow p-4 sm:p-6">
                                 <img
                                   className="hover:scale-105 duration-150 ease-in-out"
                                   src={require("../images/atlas-hexagons.png")}
@@ -175,7 +175,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="absolute top-0 bottom-0 w-36 bg-gradient-to-l from-slate-100 dark:from-gray-900 z-20 right-0"></div>
+                <div className="absolute top-0 bottom-0 dark:w-56 w-36 bg-gradient-to-l from-slate-100 dark:from-gray-900 z-20 right-0"></div>
                 <div className="absolute left-0 right-1/2 top-0 bottom-0 inset-0 opacity-[35%] transform-gpu animate-blob1 rounded-full blur-2xl bg-orange-300 dark:bg-orange-800"></div>
               </div>
               <div className=" md:flex-1 md:order-first md:pr-12 lg:pr-24">
