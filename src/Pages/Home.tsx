@@ -23,7 +23,7 @@ const Home = () => {
     "Let $P(x) = x^3 + 8x^2 - x + 3$ and let the roots of $P$ be $a, b,$ and $c.$ The roots of a monic polynomial $Q(x)$ are $ab - c^2, ac - b^2, bc - a^2.$ Find $Q(-1).$";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-20 min-h-min lg:h-[50rem] bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 dark:from-red-700 dark:via-red-600 dark:to-red-600 duration-150 ease-in-out drop-shadow-md">
+      <div className="relative -mt-20 min-h-min lg:h-[50rem] bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 dark:from-red-900 dark:via-red-700 dark:to-red-500 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 lg:pt-[4.5rem] 2xl:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
@@ -48,13 +48,13 @@ const Home = () => {
               </div>
               <div className="text-xl text-gray-100 md:text-3xl font-[500] my-4 sm:my-10">
                 An online database of{" "}
-                <span className="decoration-clone bg-gradient-to-r from-pink-200 via-orange-200 to-yellow-100 dark:from-orange-200 dark:via-orange-200 dark:to-yellow-100 text-transparent bg-clip-text font-bold">
+                <span className="decoration-clone bg-gradient-to-r dark:bg-gradient-to-t from-pink-200 via-orange-200 to-yellow-100 dark:from-orange-300 dark:via-yellow-300 dark:to-yellow-100 text-transparent bg-clip-text font-bold">
                   free, high-quality
                 </span>{" "}
                 resources to help you succeed in OMMC.
               </div>
               <a href="/atlas">
-                <button className="mt-2 bg-orange-100 dark:bg-red-800 hover:bg-orange-200 dark:hover:bg-red-800 text-gray-900 dark:text-gray-100 hover:text-orange-800 dark:hover:text-red-300 hover:scale-105 duration-150 ease-in-out dark:shadow-red-600/80 shadow-md font-semibold text-xl rounded-xl p-2 px-4">
+                <button className="mt-2 bg-orange-100 dark:bg-red-800 hover:bg-orange-200 dark:hover:bg-red-800 text-gray-900 dark:text-gray-100 hover:text-orange-800 dark:hover:text-red-400 hover:scale-105 duration-150 ease-in-out shadow-red-600/80 shadow-md font-semibold text-xl rounded-xl p-2 px-4">
                   View the Atlas{" "}
                   <ArrowCircleRightIcon className="inline mb-1 h-5 w-5 " />
                 </button>
@@ -69,14 +69,14 @@ const Home = () => {
       </div>
       <div className=" bg-slate-100 dark:bg-gray-900  ">
         <div className=" px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto ">
-          <div className="h-12 sm:h-20 md:h-24 border-r-4 border-red-700 "></div>
+          <div className="h-12 sm:h-20 md:h-24 border-r-4 border-red-600 dark:border-red-700 "></div>
         </div>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="border-r-4 border-red-700 ">
+          <div className="border-r-4 border-red-600 dark:border-red-700 ">
             <h2 className="border-l-[0.75rem] pl-4 border-red-700 text-4xl md:text-5xl 2xl:text-6xl font-black text-gray-900 dark:text-gray-100 ">
               <div className="inline">More about </div>
               <a href="https://www.ommcofficial.org/">
-                <button className="mt-2 md:mt-0 hover:scale-[1.02] duration-150 rounded-2xl px-1.5 pb-1.5 bg-gradient-to-r from-red-600 to-red-700 text-white select-none">
+                <button className="mt-2 md:mt-0 hover:scale-[1.02] duration-150 rounded-2xl px-1.5 py-1.5 bg-gradient-to-r from-red-600 to-red-700 text-white select-none">
                   OMMC.
                 </button>
               </a>
@@ -105,8 +105,8 @@ const Home = () => {
             </div>
             <div className="h-14 sm:h-20 2xl:h-28"></div>
           </div>
-          <div className=" relative  md:flex flex-col md:flex-row md:items-center border-b-4 border-r-4 border-red-700 pb-14 rounded-br-2xl">
-            <div className="absolute top-[-14px] right-[-14px] h-6 w-6 border-4 border-red-700 rounded-full bg-gray-100 dark:bg-gray-900 z-30" />
+          <div className=" relative  md:flex flex-col md:flex-row md:items-center border-b-4 border-r-4 border-red-600 dark:border-red-700 pb-14 rounded-br-2xl">
+            <div className="absolute top-[-14px] right-[-14px] h-6 w-6 border-4 border-red-600 dark:border-red-700 rounded-full bg-gray-100 dark:bg-gray-900 z-30" />
             <div className=" block md:flex-1 md:w-0 relative md:pr-12 lg:pr-24">
               <div className="relative z-10">
                 <div className="max-w-full overflow-hidden -mx-4">
@@ -180,10 +180,10 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="h-14 sm:h-20 2xl:h-18 border-l-4 border-red-700 relative">
-            <div className="absolute top-[-14px] left-[-13px] h-6 w-6 border-4   border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
+          <div className="h-14 sm:h-20 2xl:h-18 border-l-4 border-red-600 dark:border-red-700 relative">
+            <div className="absolute top-[-14px] left-[-13px] h-6 w-6 border-4 border-red-600 dark:border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
           </div>
-          <div className="   flex flex-col md:flex-row md:items-center border-red-700 border-l-4 border-b-4 rounded-bl-2xl pb-14">
+          <div className="   flex flex-col md:flex-row md:items-center border-red-600 dark:border-red-700 border-l-4 border-b-4 rounded-bl-2xl pb-14">
             <div className="flex flex-col md:flex-row md:items-center">
               <div className=" block md:flex-1 md:w-0 relative">
                 <div className="relative z-10">
@@ -253,10 +253,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-14 sm:h-20 2xl:h-14 border-r-4  border-red-700">
-            <div className="absolute top-[-14px] right-[-14px] h-6 w-6 border-4  border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
+          <div className="relative h-14 sm:h-20 2xl:h-14 border-r-4  border-red-600 dark:border-red-700">
+            <div className="absolute top-[-14px] right-[-14px] h-6 w-6 border-4  border-red-600 dark:border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
           </div>
-          <div className="flex flex-col md:flex-row md:items-center border-r-4 border-red-700 border-b-4 rounded-br-2xl pb-14">
+          <div className="flex flex-col md:flex-row md:items-center border-r-4 border-red-600 dark:border-red-700 border-b-4 rounded-br-2xl pb-14">
             <div className="flex flex-col md:flex-row md:items-center mr-4 md:mr-8">
               <div className=" md:flex-1 mt-4 md:mt-0">
                 <h3 className="sm:my-0 mb-6  font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
@@ -326,11 +326,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-12 md:h-20 2xl:h-10 border-l-4 border-red-700">
-            <div className="absolute top-[-14px] left-[-14px] h-6 w-6 border-4  border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
+          <div className="relative h-12 md:h-20 2xl:h-10 border-l-4 border-red-600 dark:border-red-700">
+            <div className="absolute top-[-14px] left-[-14px] h-6 w-6 border-4  border-red-600 dark:border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
           </div>
-          <div className="relative flex flex-col md:flex-row md:items-center border-l-4 border-red-700">
-            <div className="absolute bottom-[-14px] left-[-14px] h-6 w-6 border-4  border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
+          <div className="relative flex flex-col md:flex-row md:items-center border-l-4 border-red-600 dark:border-red-700">
+            <div className="absolute bottom-[-14px] left-[-14px] h-6 w-6 border-4  border-red-600 dark:border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
 
             <div className="   block md:flex-1 md:w-0 relative md:pr-12 lg:pr-24 ml-4 md:ml-8 ">
               <div className="relative z-10">

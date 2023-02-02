@@ -10,7 +10,7 @@ const QuestionBody = (props) => {
               <div className="text-4xl md:text-5xl font-extrabold py-4">
                 Error Code 01
               </div>
-              <div className="text-lg md:text-xl max-w-2xl mx-auto font-semibold">
+              <div className="text-lg md:text-xl max-w-2xl mx-auto font-base">
                 Due to a server error, questions were not able to be retreived.
                 Contact the server admin through OMMC Discord to resolve the
                 issue.
