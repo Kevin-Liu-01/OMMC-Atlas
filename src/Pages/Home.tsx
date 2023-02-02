@@ -23,11 +23,11 @@ const Home = () => {
     "Let $P(x) = x^3 + 8x^2 - x + 3$ and let the roots of $P$ be $a, b,$ and $c.$ The roots of a monic polynomial $Q(x)$ are $ab - c^2, ac - b^2, bc - a^2.$ Find $Q(-1).$";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-20 min-h-min lg:h-[50rem] bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 dark:from-red-900 dark:via-red-700 dark:to-red-500 duration-150 ease-in-out drop-shadow-md">
+      <div className="relative -mt-20 min-h-min 2xl:h-[50rem] bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 dark:from-red-900 dark:via-red-700 dark:to-red-500 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 lg:pt-[4.5rem] 2xl:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
-          <div className="grid lg:grid-cols-2 relative z-10">
+          <div className="grid lg:grid-cols-2 relative z-10 mx-4 2xl:mx-0">
             <div className="hidden 2xl:flex items-center justify-center my-auto ">
               <img
                 className="w-[70%] 2xl:w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
@@ -37,7 +37,7 @@ const Home = () => {
             </div>
             <div className="2xl:hidden flex items-center justify-center my-auto ">
               <img
-                className="mx-auto lg:w-[85%] xl:w-[60%] w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
+                className="mx-auto lg:w-[85%] xl:w-[60%] w-auto max-h-80 lg:max-h-min hover:scale-105 duration-150 ease-in-out transform select-none"
                 src={require("../images/atlas-centered.png")}
                 alt="OMMC Circles"
               ></img>
@@ -54,7 +54,7 @@ const Home = () => {
                 resources to help you succeed in OMMC.
               </div>
               <a href="/atlas">
-                <button className="mt-2 bg-orange-100 dark:bg-red-800 hover:bg-orange-200 dark:hover:bg-red-800 text-gray-900 dark:text-gray-100 hover:text-orange-800 dark:hover:text-red-400 hover:scale-105 duration-150 ease-in-out shadow-red-600/80 shadow-md font-semibold text-xl rounded-xl p-2 px-4">
+                <button className="mt-2 bg-orange-100 dark:bg-red-600 dark:lg:bg-red-800 hover:bg-orange-200 dark:hover:bg-red-800 text-gray-900 dark:text-gray-100 hover:text-orange-800 dark:hover:text-red-400 hover:scale-105 duration-150 ease-in-out md:shadow-red-600/80 shadow-md font-semibold text-xl rounded-xl p-2 px-4">
                   View the Atlas{" "}
                   <ArrowCircleRightIcon className="inline mb-1 h-5 w-5 " />
                 </button>
