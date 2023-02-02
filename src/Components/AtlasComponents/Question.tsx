@@ -15,10 +15,8 @@ const Question = (props) => {
     } else if (level === "Advanced") {
       difficultyString = "bg-red-300 text-red-800";
     }
-    return (
-      difficultyString +
-      " ml-[0.4rem] px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-sm inline-block"
-    );
+    return ` px-2 py-2 sm:py-1 text-xs sm:text-sm mt-2 md:text-base font-semibold rounded-lg shadow-sm inline-block
+      ${difficultyString}`;
   }
 
   function topicColor(topic) {
@@ -32,10 +30,7 @@ const Question = (props) => {
     } else if (topic === "Combinatorics") {
       topicString = "bg-cyan-300 text-cyan-800";
     }
-    return (
-      topicString +
-      " px-2 py-1 text-xs sm:text-base font-semibold rounded-lg shadow-sm inline-block"
-    );
+    return `mt-3 mr-1 px-2 py-2 sm:py-1 text-xs sm:text-sm md:text-base font-semibold rounded-lg shadow-sm inline-block ${topicString}`;
   }
 
   return (
@@ -71,7 +66,7 @@ const Question = (props) => {
           </>
         )}
       </div>
-      <div className="mb-[0.625rem]">
+      <div className=" ">
         <a
           className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-sm hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out"
           href={"/view/" + props.record._id}

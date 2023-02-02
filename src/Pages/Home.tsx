@@ -23,7 +23,7 @@ const Home = () => {
     "Let $P(x) = x^3 + 8x^2 - x + 3$ and let the roots of $P$ be $a, b,$ and $c.$ The roots of a monic polynomial $Q(x)$ are $ab - c^2, ac - b^2, bc - a^2.$ Find $Q(-1).$";
   return (
     <div className=" min-h-screen overflow-hidden ">
-      <div className="relative -mt-20 min-h-screen bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 dark:from-red-700 dark:via-red-600 dark:to-red-600 duration-150 ease-in-out drop-shadow-md">
+      <div className="relative -mt-20 min-h-min lg:h-[50rem] bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 dark:from-red-700 dark:via-red-600 dark:to-red-600 duration-150 ease-in-out drop-shadow-md">
         <div className="flex pt-28 sm:pt-12 lg:pt-[4.5rem] 2xl:pt-24 max-w-7xl mx-8 lg:mx-auto flex-1  flex-col justify-center">
           <div className="sm:h-16 w-16"></div>
 
@@ -43,7 +43,7 @@ const Home = () => {
               ></img>
             </div>
             <div className="my-auto text-center text-white xl:pr-12 2xl:pr-0">
-              <div className="text-5xl md:text-7xl  font-extrabold lg:mt-0 mt-12 mb-10">
+              <div className="text-4xl md:text-7xl  font-extrabold lg:mt-0 mt-12 mb-10">
                 OMMC Atlas
               </div>
               <div className="text-xl text-gray-100 md:text-3xl font-[500] my-4 sm:my-10">
@@ -103,7 +103,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="h-20 2xl:h-28"></div>
+            <div className="h-14 sm:h-20 2xl:h-28"></div>
           </div>
           <div className=" relative  md:flex flex-col md:flex-row md:items-center border-b-4 border-r-4 border-red-700 pb-14 rounded-br-2xl">
             <div className="absolute top-[-14px] right-[-14px] h-6 w-6 border-4 border-red-700 rounded-full bg-gray-100 dark:bg-gray-900 z-30" />
@@ -180,7 +180,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="h-20 2xl:h-18 border-l-4 border-red-700 relative">
+          <div className="h-14 sm:h-20 2xl:h-18 border-l-4 border-red-700 relative">
             <div className="absolute top-[-14px] left-[-13px] h-6 w-6 border-4   border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
           </div>
           <div className="   flex flex-col md:flex-row md:items-center border-red-700 border-l-4 border-b-4 rounded-bl-2xl pb-14">
@@ -253,7 +253,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-20 2xl:h-14 border-r-4  border-red-700">
+          <div className="relative h-14 sm:h-20 2xl:h-14 border-r-4  border-red-700">
             <div className="absolute top-[-14px] right-[-14px] h-6 w-6 border-4  border-red-700 rounded-full bg-gray-100 dark:bg-gray-900" />
           </div>
           <div className="flex flex-col md:flex-row md:items-center border-r-4 border-red-700 border-b-4 rounded-br-2xl pb-14">
