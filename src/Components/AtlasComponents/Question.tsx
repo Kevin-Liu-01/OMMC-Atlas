@@ -28,9 +28,9 @@ const Question = (props) => {
     } else if (topic === "Number Theory") {
       topicString = "bg-yellow-300 text-yellow-800";
     } else if (topic === "Algebra") {
-      topicString = "bg-red-300 text-red-800";
-    } else if (topic === "Combinatorics") {
       topicString = "bg-purple-300 text-purple-800";
+    } else if (topic === "Combinatorics") {
+      topicString = "bg-cyan-300 text-cyan-800";
     }
     return (
       topicString +
@@ -44,7 +44,7 @@ const Question = (props) => {
         {" "}
         {props.record.question_comp}
       </div>
-      <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-[#b4b8bf]  rounded-lg overflow-hidden mb-3 ">
+      <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-[#c0c4cb]  rounded-lg overflow-hidden mb-3 ">
         <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
           <Latex>{props.record.question_name}</Latex>
         </p>
@@ -63,7 +63,7 @@ const Question = (props) => {
             <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-1">
               Solution
             </div>
-            <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-[#b4b8bf] rounded-lg overflow-hidden">
+            <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-[#c0c4cb] rounded-lg overflow-hidden">
               <div className="relative p-2 h-[7rem] overflow-auto scrollbar text-xs md:text-base">
                 <Latex>{props.record.question_position}</Latex>
               </div>

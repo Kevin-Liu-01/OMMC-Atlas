@@ -21,11 +21,12 @@ function Navbar(props) {
                 alt="OMMCLogo"
               />
               <div className="ml-2 my-2">
-                <span className="text-2xl font-extrabold text-gray-800 dark:text-white dark:text-transparent bg-clip-text bg-gradient-to-r dark:from-red-500 dark:to-red-600 ">
-                  <span className="hidden sm:inline">OMMC </span>Atlas
+                <span className="text-2xl font-[700] text-gray-800 dark:text-red-600 ">
+                  <span className="hidden sm:inline">OMMC </span>
+                  Atlas
                 </span>
                 <div className="font-mono text-[0.6rem] dark:text-gray-200 text-gray-500 border text-center border-gray-500 dark:border-gray-600 rounded-full bg-white bg-gradient-to-r dark:from-gray-700 dark:to-gray-800 block px-1">
-                  Version 2.0
+                  Version 3.2.1
                 </div>
               </div>
             </a>
@@ -57,7 +58,7 @@ function Navbar(props) {
           </div>
           <div className="pl-4 md:mr-2 flex-shrink-0 ml-auto flex justify-self-end items-center select-none ">
             <button
-              className="flex bg-gray-300 dark:bg-gray-800 rounded-xl px-1 py-1 hover:bg-gray-400  text-white dark:hover:text-gray-800 hover:text-yellow-400 dark:hover:bg-gray-700"
+              className="flex bg-gray-300 dark:bg-gray-800 rounded-xl px-1 py-1 hover:bg-slate-400  text-white dark:hover:text-gray-800 hover:text-yellow-400 dark:hover:bg-slate-700"
               onClick={() => props.setDark(!props.dark)}
             >
               <div className="h-9 w-9 flex items-center justify-center">

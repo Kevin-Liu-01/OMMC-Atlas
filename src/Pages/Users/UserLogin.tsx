@@ -115,7 +115,7 @@ function Login(props) {
   };
 
   return (
-    <div className="flex -mt-24 min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500  dark:from-gray-700 dark:via-gray-900 dark:to-black justify-center items-center">
+    <div className="flex -mt-24 min-h-screen bg-gradient-to-r dark:bg-gradient-to-b from-pink-500 via-red-500 to-yellow-500  dark:from-gray-800 dark:to-gray-900 justify-center items-center">
       <div className="flex justify-center items-center mt-24">
         <div className="my-8 max-w-7xl mx-auto w-[20rem] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 py-8 px-6 md:px-8 rounded-2xl">
           <h3 className="font-extrabold text-4xl">Log In</h3>

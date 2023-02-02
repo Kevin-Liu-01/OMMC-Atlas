@@ -267,7 +267,7 @@ const RecordList = (props) => {
   // This following section will display the table with the questions.
   return (
     <div className="min-h-screen  overflow-hidden ">
-      <div className="py-8  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:to-red-800 duration-150 ease-in-out text-center">
+      <div className="py-8  px-5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 dark:from-red-500 dark:via-red-700 dark:to-red-800 duration-150 ease-in-out text-center">
         <div className="max-w-3xl mx-auto mb-6">
           <div className="text-center text-3xl sm:text-5xl font-extrabold text-white dark:text-dark-high-emphasis mb-6">
             Year 1 Atlas
