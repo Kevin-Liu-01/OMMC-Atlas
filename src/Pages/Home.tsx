@@ -83,7 +83,7 @@ const Home = () => {
             </h2>
             <div className="h-6 2xl:h-12"></div>
             <div className="   text-lg md:text-xl 2xl:text-2xl font-medium max-w-4xl leading-relaxed text-gray-700 dark:text-gray-400 mr-4">
-              <div className="bg-gray-200 dark:bg-gray-800 rounded-2xl pl-4 pt-3 p-2 ">
+              <div className="bg-[#fafdff] dark:bg-gray-800 rounded-2xl pl-4 pt-3 p-2 ">
                 <div className=" w-6 absolute overflow-hidden inline-block">
                   <div className="h-16 bg-red-700 dark:bg-red-700 rotate-45 transform origin-top-left" />
                 </div>
@@ -114,28 +114,30 @@ const Home = () => {
                     <div className="flex flex-col mb-4">
                       <div className="overflow-x-auto -mx-4 pl-4 md:pr-4 -my-2 py-2">
                         <div className="align-middle inline-block shadow rounded-2xl overflow-hidden ">
-                          <div className=" select-none bg-white dark:bg-gray-800  p-4 sm:p-6 rounded-2xl">
+                          <div className="select-none bg-white dark:bg-gray-800  p-4 sm:p-6 rounded-2xl">
                             <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
                               {" "}
                               Year 1
                             </div>
                             <div className="shadow-inner bg-gray-100 dark:bg-gray-700 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
-                              <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
+                              <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
                                 <Latex>{equation}</Latex>
                               </p>
                             </div>
-                            <div className="flex mb-3">
-                              <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md focus:ring-opacity-75 duration-150 ease-in-out">
-                                View Solution{" "}
-                                <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+                            <a href="/view/6137c0fc65118c0016c87806">
+                              <div className="flex mb-3">
+                                <button className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
+                                  View Solution{" "}
+                                  <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+                                </button>
                               </div>
-                            </div>
-                            <div className="flex mb-[0.625rem]">
-                              <div className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md focus:ring-opacity-75 duration-150 ease-in-out">
-                                View Problem{" "}
-                                <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+                              <div className="flex mb-[0.625rem]">
+                                <button className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
+                                  View Problem{" "}
+                                  <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+                                </button>
                               </div>
-                            </div>
+                            </a>
                             <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300 text-yellow-800">
                               Number Theory
                             </button>{" "}
@@ -164,7 +166,7 @@ const Home = () => {
                   <div className="w-12 h-12 rounded-xl mb-4 bg-gradient-to-br flex items-center justify-center text-white from-red-600 to-red-800">
                     <DatabaseIcon className="w-6 h-6" />
                   </div>
-                </div>{" "}
+                </div>
                 <div className="ml-4 flex text-xl font-[500]">
                   OMMC Atlas is a database of curated resources for students. It
                   contains a variety of problems used on OMMC contests, and is
@@ -198,22 +200,24 @@ const Home = () => {
                                 Year 1
                               </div>
                               <div className="shadow-inner bg-gray-100 dark:bg-gray-700 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
-                                <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
+                                <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
                                   <Latex>{equation2}</Latex>
                                 </p>
                               </div>
-                              <div className="flex mb-3">
-                                <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md focus:ring-opacity-75 duration-150 ease-in-out">
-                                  View Solution{" "}
-                                  <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+                              <a href="/view/617587bfc7140100164e22c2">
+                                <div className="flex mb-3">
+                                  <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
+                                    View Solution{" "}
+                                    <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+                                  </div>
                                 </div>
-                              </div>
-                              <div className="flex mb-[0.625rem]">
-                                <div className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md focus:ring-opacity-75 duration-150 ease-in-out">
-                                  View Problem{" "}
-                                  <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+                                <div className="flex mb-[0.625rem]">
+                                  <div className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
+                                    View Problem{" "}
+                                    <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+                                  </div>
                                 </div>
-                              </div>
+                              </a>
                               <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300 text-yellow-800">
                                 Number Theory
                               </button>{" "}
@@ -261,7 +265,7 @@ const Home = () => {
               <div className=" md:flex-1 mt-4 md:mt-0">
                 <h3 className="sm:my-0 mb-6  font-bold text-2xl sm:text-xl md:text-3xl text-gray-900 dark:text-gray-100">
                   What are the{" "}
-                  <span className="lg:inline inline-block rounded-lg px-1.5 bg-gradient-to-r from-red-600 to-red-700 text-white select-none">
+                  <span className="lg:inline inline-block rounded-lg pb-0.5 px-1.5 bg-gradient-to-r from-red-600 to-red-700 text-white select-none">
                     Questions
                   </span>{" "}
                   Like?
@@ -283,7 +287,7 @@ const Home = () => {
               <div className="order-first block md:flex-1 md:w-0 relative md:pr-12 lg:pr-24">
                 <div className="relative z-10">
                   <div className="max-w-full overflow-hidden -mx-4">
-                    <div className="min-w-[36rem] px-4">
+                    <div className="min-w-[auto]  px-4">
                       <div className="flex flex-col mb-4">
                         <div className="overflow-x-auto -mx-4 pl-4 md:pr-4 -my-2 py-2">
                           <div className="align-middle inline-block shadow rounded-2xl overflow-hidden ">
@@ -292,22 +296,24 @@ const Home = () => {
                                 Year 1
                               </div>
                               <div className="shadow-inner bg-gray-100 dark:bg-gray-700 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
-                                <p className=" p-2 min-h-[10rem] max-h-[10rem] overflow-auto text-sm md:text-base leading-6">
+                                <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
                                   <Latex>{equation3}</Latex>
                                 </p>
                               </div>
-                              <div className="flex mb-3">
-                                <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md focus:ring-opacity-75 duration-150 ease-in-out">
-                                  View Solution{" "}
-                                  <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+                              <a href="/view/6137c21f65118c0016c87809">
+                                <div className="flex mb-3">
+                                  <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
+                                    View Solution{" "}
+                                    <CheckCircleIcon className="inline mb-1 h-5 w-5 " />
+                                  </div>
                                 </div>
-                              </div>
-                              <div className="flex mb-[0.625rem]">
-                                <div className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md focus:ring-opacity-75 duration-150 ease-in-out">
-                                  View Problem{" "}
-                                  <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+                                <div className="flex mb-[0.625rem]">
+                                  <div className="px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
+                                    View Problem{" "}
+                                    <ArrowsExpandIcon className="inline mb-1 h-5 w-5 " />
+                                  </div>
                                 </div>
-                              </div>
+                              </a>
                               <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-purple-300 text-purple-800">
                                 Algebra
                               </button>{" "}
@@ -350,7 +356,7 @@ const Home = () => {
             <div className="ml-4 md:ml-0 md:flex-1 md:mt-0 my-10 text-xl font-[500]">
               <h3 className="border-l-[10px] pb-2 sm:pb-0 border-[#5865F2] pl-3 text-gray-900 text-[2rem] md:text-3xl leading-8 font-bold tracking-tight dark:text-white">
                 Join us on{" "}
-                <span className="sm:inline inline-block rounded-lg px-1.5 bg-[#5865F2] text-white select-none">
+                <span className="mt-1 sm:mt-0 sm:inline inline-block rounded-lg py-0.5 px-1.5 bg-[#5865F2] text-white select-none">
                   Discord!
                 </span>
               </h3>

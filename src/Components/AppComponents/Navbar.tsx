@@ -26,7 +26,8 @@ function Navbar(props) {
                   Atlas
                 </span>
                 <div className="font-mono text-[0.6rem] dark:text-gray-200 text-gray-500 border text-center border-gray-500 dark:border-gray-600 rounded-full bg-white bg-gradient-to-r dark:from-gray-700 dark:to-gray-800 block px-1">
-                  Version 3.2.1
+                  <span className="sm:hidden inline">Version 3 </span>
+                  <span className="hidden sm:inline">Version 3.2.1</span>
                 </div>
               </div>
             </a>
@@ -36,7 +37,7 @@ function Navbar(props) {
             {signInStatus ? (
               <div className="nav-item ">
                 <a
-                  className="nav-link text-sm sm:text-base md:text-lg"
+                  className="nav-link text-sm sm:text-base md:text-lg text-right"
                   href="/profile"
                 >
                   Welcome,{" "}
