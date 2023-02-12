@@ -115,7 +115,7 @@ const Home = () => {
                       <div className="overflow-x-auto -mx-4 pl-4 md:pr-4 -my-2 py-2">
                         <div className="align-middle inline-block shadow rounded-2xl overflow-hidden ">
                           <div className="select-none bg-white dark:bg-gray-800  p-4 sm:p-6 rounded-2xl">
-                            <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
+                            <div className="text-blue-700 dark:text-blue-400 font-medium text-md mb-3">
                               {" "}
                               Year 1
                             </div>
@@ -194,17 +194,16 @@ const Home = () => {
                       <div className="flex flex-col mb-4">
                         <div className="overflow-x-auto -mx-4 pl-4 pr-0 md:pr-4 -my-2 py-2">
                           <div className="ml-4 md:ml-0 align-middle inline-block shadow rounded-2xl overflow-hidden ">
-                            <div className=" select-none bg-white dark:bg-gray-800 shadow p-4 sm:p-6 rounded-2xl">
-                              <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
-                                {" "}
+                            <div className=" select-none bg-white dark:bg-gray-800  p-4 sm:p-6 rounded-2xl">
+                              <div className="text-blue-700 dark:text-blue-400 font-medium text-md mb-3">
                                 Year 1
                               </div>
                               <div className="shadow-inner bg-gray-100 dark:bg-gray-700 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
                                 <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
-                                  <Latex>{equation2}</Latex>
+                                  <Latex>{equation3}</Latex>
                                 </p>
                               </div>
-                              <a href="/view/617587bfc7140100164e22c2">
+                              <a href="/view/6137c21f65118c0016c87809">
                                 <div className="flex mb-3">
                                   <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
                                     View Solution{" "}
@@ -218,11 +217,11 @@ const Home = () => {
                                   </div>
                                 </div>
                               </a>
-                              <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300 text-yellow-800">
-                                Number Theory
+                              <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-purple-300 text-purple-800">
+                                Algebra
                               </button>{" "}
-                              <button className="ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-red-300 text-red-800">
-                                Advanced
+                              <button className="ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-orange-300 text-orange-800">
+                                Intermediate
                               </button>
                             </div>
                           </div>
@@ -291,16 +290,17 @@ const Home = () => {
                       <div className="flex flex-col mb-4">
                         <div className="overflow-x-auto -mx-4 pl-4 md:pr-4 -my-2 py-2">
                           <div className="align-middle inline-block shadow rounded-2xl overflow-hidden ">
-                            <div className=" select-none bg-white dark:bg-gray-800  p-4 sm:p-6 rounded-2xl">
-                              <div className="text-blue-700 dark:text-blue-400 font-medium text-sm mb-3">
+                            <div className=" select-none bg-white dark:bg-gray-800 shadow p-4 sm:p-6 rounded-2xl">
+                              <div className="text-blue-700 dark:text-blue-400 font-medium text-md mb-3">
+                                {" "}
                                 Year 1
                               </div>
                               <div className="shadow-inner bg-gray-100 dark:bg-gray-700 dark:text-gray-300 rounded-lg overflow-hidden mb-3">
                                 <p className="relative p-2 min-h-[10rem] max-h-[10rem] overflow-auto scrollbar text-sm md:text-base leading-6">
-                                  <Latex>{equation3}</Latex>
+                                  <Latex>{equation2}</Latex>
                                 </p>
                               </div>
-                              <a href="/view/6137c21f65118c0016c87809">
+                              <a href="/view/617587bfc7140100164e22c2">
                                 <div className="flex mb-3">
                                   <div className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
                                     View Solution{" "}
@@ -314,11 +314,11 @@ const Home = () => {
                                   </div>
                                 </div>
                               </a>
-                              <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-purple-300 text-purple-800">
-                                Algebra
+                              <button className="px-2 py-1 font-semibold rounded-lg shadow-md bg-yellow-300 text-yellow-800">
+                                Number Theory
                               </button>{" "}
-                              <button className="ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-orange-300 text-orange-800">
-                                Intermediate
+                              <button className="ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-md bg-red-300 text-red-800">
+                                Advanced
                               </button>
                             </div>
                           </div>

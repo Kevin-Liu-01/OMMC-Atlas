@@ -43,6 +43,8 @@ const View = () => {
       difficultyString = "bg-orange-300 text-orange-800";
     } else if (question_level === "Advanced") {
       difficultyString = "bg-red-300 text-red-800";
+    } else {
+      difficultyString = "bg-gray-300 text-gray-800";
     }
     return (
       difficultyString +
@@ -60,6 +62,8 @@ const View = () => {
       topicString = "bg-red-300 text-red-800";
     } else if (topic === "Combinatorics") {
       topicString = "bg-purple-300 text-purple-800";
+    } else {
+      topicString = "bg-gray-400 text-gray-700";
     }
     return (
       topicString +
@@ -68,14 +72,14 @@ const View = () => {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden bg-gray-100 dark:bg-gray-800">
+    <div className="min-h-screen overflow-hidden bg-gradient-to-b from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-900">
       <div className="h-16 w-16"></div>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-2xl drop-shadow-lg">
           <div className="flex text-blue-700 dark:text-blue-400 font-medium text-2xl mb-3">
-            {question_comp}
+            {question_comp ? question_comp : "Year..."}
             <a
-              className="justify-self-end ml-auto text-underline text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-500 duration-150"
+              className="justify-self-end ml-auto text-underline text-red-700 dark:text-red-500 hover:text-red-800 dark:hover:text-red-600 duration-150"
               href="/atlas"
             >
               <button>
@@ -85,14 +89,18 @@ const View = () => {
             </a>
           </div>
           <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-[#c0c4cb] rounded-lg overflow-hidden mb-3">
-            <p className=" p-2 min-h-[15rem] max-h-[15rem] overflow-auto text-lg md:text-xl leading-6">
-              <Latex>{question_name}</Latex>
+            <p className=" p-2 min-h-[15rem] max-h-[15rem] overflow-auto text-lg md:text-xl leading-6 scrollbar">
+              {question_name !== "" ? (
+                <Latex>{question_name}</Latex>
+              ) : (
+                "Loading! Please wait..."
+              )}
             </p>
           </div>
           <div className="mb-3">
             {showAnswer === true && (
               <button
-                className="text-xl px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-700 focus:ring-opacity-75 duration-150 ease-in-out"
+                className="text-xl px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out"
                 onClick={() => setShowAnswer(false)}
               >
                 View Solution{" "}
@@ -105,15 +113,23 @@ const View = () => {
                   Solution
                 </div>
                 <div className="shadow-inner bg-gray-100 dark:bg-gray-600 dark:text-[#c0c4cb] rounded-lg overflow-hidden">
-                  <div className=" p-2 h-[15rem] overflow-auto text-lg md:text-xl">
-                    <Latex>{question_position}</Latex>
+                  <div className=" p-2 h-[15rem] overflow-auto text-lg md:text-xl scrollbar">
+                    {question_position !== "" ? (
+                      <Latex>{question_position}</Latex>
+                    ) : (
+                      "Loading! Please wait..."
+                    )}
                   </div>
                 </div>
               </>
             )}
           </div>
-          <div className={topicColor(question_topic)}>{question_topic}</div>{" "}
-          <div className={difficultyColor()}>{question_level}</div>
+          <div className={topicColor(question_topic)}>
+            {question_topic ? question_topic : "Topic"}
+          </div>{" "}
+          <div className={difficultyColor()}>
+            {question_level ? question_level : "Difficulty"}
+          </div>
           {/* <a
         href="/"
         onClick={() => {
