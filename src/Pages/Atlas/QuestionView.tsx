@@ -48,7 +48,7 @@ const View = () => {
     }
     return (
       difficultyString +
-      " text-xl ml-[0.4rem] px-2 py-1 font-semibold rounded-lg shadow-sm inline-block"
+      " text-xl px-2 py-1 mt-3 font-semibold rounded-lg shadow-sm inline-block"
     );
   }
 
@@ -67,7 +67,7 @@ const View = () => {
     }
     return (
       topicString +
-      " text-xl px-2 py-1 font-semibold rounded-lg shadow-sm inline-block"
+      " text-xl px-2 py-1 mt-3 mr-[0.4rem] font-semibold rounded-lg shadow-sm inline-block"
     );
   }
 
@@ -83,7 +83,8 @@ const View = () => {
               href="/atlas"
             >
               <button>
-                Return to Atlas{" "}
+                <span class="hidden sm:inline">Return to Atlas </span>
+                <span class="sm:hidden inline">Back </span>
                 <ArrowCircleLeftIcon className="mb-1 inline h-6 w-6" />
               </button>
             </a>
@@ -97,7 +98,7 @@ const View = () => {
               )}
             </p>
           </div>
-          <div className="mb-3">
+          <div className="">
             {showAnswer === true && (
               <button
                 className="text-xl px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out"
