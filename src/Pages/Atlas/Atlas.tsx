@@ -24,9 +24,9 @@ const RecordList = (props) => {
     axios
       .get(`${Constants.SERVER_HOST}/question/`)
       .then((response) => {
-        console.log(
-          `/question/ returned response from: ${Constants.SERVER_HOST}/question/`
-        );
+        // console.log(
+        //   `/question/ returned response from: ${Constants.SERVER_HOST}/question/`
+        // );
         setQuestions(response.data);
         setOrigQuestions(response.data);
         setGeo(0);
@@ -70,9 +70,9 @@ const RecordList = (props) => {
       axios
         .get(`${Constants.SERVER_HOST}/record/`)
         .then((response) => {
-          console.log(
-            `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
-          );
+          // console.log(
+          //   `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
+          // );
           setQuestions(response.data);
         })
         .catch(function (error) {
@@ -90,9 +90,9 @@ const RecordList = (props) => {
       axios
         .get(`${Constants.SERVER_HOST}/record/`)
         .then((response) => {
-          console.log(
-            `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
-          );
+          // console.log(
+          //   `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
+          // );
           setQuestions(response.data);
         })
         .catch(function (error) {

@@ -16,7 +16,7 @@ let Latex = require("react-latex");
 
 const Home = () => {
   const equation =
-    "In equilateral triangle $XYZ$ with side length $10$, define points $A, B$ on $XY,$ points $C, D$ on $YZ,$ and points $E, F$ on $ZX$ such that $ABDE$ and $ACEF$ are rectangles. The area of hexagon $ABCDEF$ can be written as $sqrt{x}$ for some positive integer $x$. Find $x$.";
+    "There are a family of 5 siblings. They have a pile of candies, and are trying to split them up among themselves. If the 2 oldest siblings share the candy, they will have 1 candy left over. If the 3 oldest siblings share the candy, they will also have 1 left over. If all 5 siblings share the candy, they will also have 1 left over. What is the minimum amount of candy required for this to be true?";
   const equation2 =
     "Positive integers $a,b,c$ exist such that $a+b+c+1$, $a^2+b^2+c^2 +1$, $a^3+b^3+c^3+1,$ and $a^4+b^4+c^4+7459$ are all multiples of $p$ for some prime $p$. Find the sum of all possible values of $p$ less than $1000$.";
   const equation3 =
@@ -124,7 +124,7 @@ const Home = () => {
                                 <Latex>{equation}</Latex>
                               </p>
                             </div>
-                            <a href="/view/6137c0fc65118c0016c87806">
+                            <a href="/view/613784946ca3eb0016f2e91d">
                               <div className="flex mb-3">
                                 <button className=" px-2 py-1 font-semibold text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:ring-opacity-75 duration-150 ease-in-out">
                                   View Solution{" "}
