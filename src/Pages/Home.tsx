@@ -31,14 +31,14 @@ const Home = () => {
             <div className="hidden 2xl:flex items-center justify-center my-auto ">
               <img
                 className="w-[70%] 2xl:w-[100%] hover:scale-105 duration-150 ease-in-out transform select-none"
-                src={require("../images/atlas-circles.png")}
+                src={"/images/atlas-circles.png"}
                 alt="OMMC Circles Spaced"
               ></img>
             </div>
             <div className="2xl:hidden flex items-center justify-center my-auto ">
               <img
                 className="mx-auto lg:w-[85%] xl:w-[60%] w-auto max-h-80 lg:max-h-min hover:scale-105 duration-150 ease-in-out transform select-none"
-                src={require("../images/atlas-centered.png")}
+                src={"/images/atlas-centered.png"}
                 alt="OMMC Circles"
               ></img>
             </div>

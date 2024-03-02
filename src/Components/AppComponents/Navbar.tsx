@@ -15,11 +15,7 @@ function Navbar(props) {
               href="/"
               className="flex-shrink-0  flex items-center select-none transform duration-150 ease-in-out hover:scale-105 "
             >
-              <img
-                className="w-14 "
-                src="https://cdn.discordapp.com/attachments/1044744976942243880/1045383726756003880/OMMC-Logo_1.png"
-                alt="OMMCLogo"
-              />
+              <img className="w-14 " src="/images/ommc.png" alt="OMMCLogo" />
               <div className="ml-2 my-2">
                 <span className="text-2xl font-[700] text-gray-800 dark:text-red-600 ">
                   <span className="hidden sm:inline">OMMC </span>
