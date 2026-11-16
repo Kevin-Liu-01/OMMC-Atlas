@@ -67,17 +67,7 @@ const RecordList = (props) => {
 
   const searchData = () => {
     if (searchInput === "") {
-      axios
-        .get(`${Constants.SERVER_HOST}/record/`)
-        .then((response) => {
-          // console.log(
-          //   `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
-          // );
-          setQuestions(response.data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      setQuestions(origQuestions);
       return;
     }
     const fuse = new Fuse(questions, {
@@ -87,17 +77,7 @@ const RecordList = (props) => {
 
     const matches = [];
     if (!result.length) {
-      axios
-        .get(`${Constants.SERVER_HOST}/record/`)
-        .then((response) => {
-          // console.log(
-          //   `/record/ returned response from: ${Constants.SERVER_HOST}/record/`
-          // );
-          setQuestions(response.data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      setQuestions(origQuestions);
     } else {
       result.forEach(({ item }) => matches.push(item));
       setQuestions(matches);
